@@ -1,0 +1,4 @@
+kernel/drivers/net/mii.ko
+kernel/drivers/net/arm/m2s_eth.ko
+kernel/drivers/net/phy/libphy.ko
+kernel/drivers/net/phy/marvell.ko

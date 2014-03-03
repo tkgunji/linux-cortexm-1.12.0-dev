@@ -1,0 +1,2 @@
+kernel/fs/lockd/lockd.ko
+kernel/fs/nfs/nfs.ko

@@ -1,0 +1,4 @@
+kernel/arch/arm/mach-m2s/uart.ko
+kernel/arch/arm/mach-m2s/spi.ko
+kernel/arch/arm/mach-m2s/eth.ko
+kernel/arch/arm/mach-m2s/i2c.ko

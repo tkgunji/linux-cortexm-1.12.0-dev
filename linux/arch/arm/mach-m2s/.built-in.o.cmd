@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-m2s/built-in.o :=  arm-uclinuxeabi-ld -EL    -r -o arch/arm/mach-m2s/built-in.o arch/arm/mach-m2s/m2s_platform.o arch/arm/mach-m2s/timer.o arch/arm/mach-m2s/clock.o arch/arm/mach-m2s/iomux.o arch/arm/mach-m2s/reboot.o arch/arm/mach-m2s/uart.o arch/arm/mach-m2s/spi.o arch/arm/mach-m2s/eth.o arch/arm/mach-m2s/i2c.o arch/arm/mach-m2s/gpio.o 

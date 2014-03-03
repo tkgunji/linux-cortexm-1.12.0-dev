@@ -1,0 +1,1 @@
+cmd_arch/arm/mm/built-in.o :=  arm-uclinuxeabi-ld -EL    -r -o arch/arm/mm/built-in.o arch/arm/mm/dma-mapping.o arch/arm/mm/extable.o arch/arm/mm/fault.o arch/arm/mm/init.o arch/arm/mm/iomap.o arch/arm/mm/nommu.o arch/arm/mm/proc-syms.o arch/arm/mm/abort-nommu.o arch/arm/mm/pabort-legacy.o arch/arm/mm/proc-v7m.o 
