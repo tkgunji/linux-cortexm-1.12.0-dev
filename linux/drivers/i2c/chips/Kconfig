@@ -16,4 +16,22 @@ config SENSORS_TSL2550
 	  This driver can also be built as a module.  If so, the module
 	  will be called tsl2550.
 
+config SENSORS_AD7417
+	tristate "AD7417 sensor"
+	depends on EXPERIMENTAL
+	help
+	  If you say yes here you get support for the AD7417 sensor.
+
+	  This driver can also be built as a module.  If so, the module
+	  will be called ad7417
+
+config SENSORS_SHT25
+	tristate "SHT25 sensor"
+	depends on EXPERIMENTAL
+	help
+	  If you say yes here you get support for the SHT25 sensor.
+
+	  This driver can also be built as a module.  If so, the module
+	  will be called sht25
+
 endmenu
