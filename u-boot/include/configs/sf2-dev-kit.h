@@ -138,8 +138,10 @@
  * Configuration of the external memory
  */
 #define CONFIG_NR_DRAM_BANKS		1
+//#define CONFIG_SYS_RAM_BASE		0xA0000000
+//#define CONFIG_SYS_RAM_SIZE		(256 * 1024 * 1024)
 #define CONFIG_SYS_RAM_BASE		0xA0000000
-#define CONFIG_SYS_RAM_SIZE		(256 * 1024 * 1024)
+#define CONFIG_SYS_RAM_SIZE		(64 * 1024 * 1024)
 
 /*
  * Ethernet driver configuration
@@ -175,6 +177,8 @@
 
 #define CONFIG_SPI_FLASH		1
 #define CONFIG_SPI_FLASH_ATMEL		1
+#define CONFIG_SPI_FLASH_WINBOND        1
+
 #define CONFIG_SPI_FLASH_BUS		0
 #define CONFIG_SPI_FLASH_CS		0
 #define CONFIG_SPI_FLASH_MODE		3
@@ -205,8 +209,9 @@
 #define CONFIG_SYS_NS16550_SERIAL	1
 #define CONFIG_SYS_NS16550_REG_SIZE	(-4)
 #define CONFIG_SYS_NS16550_CLK		clock_get(CLOCK_PCLK1)
-#define CONFIG_CONS_INDEX		2
-#define CONFIG_SYS_NS16550_COM2		0x40010000
+#define CONFIG_CONS_INDEX		1
+//#define CONFIG_SYS_NS16550_COM2		0x40010000
+#define CONFIG_SYS_NS16550_COM1		0x40010000
 #define CONFIG_BAUDRATE			115200
 #define CONFIG_SYS_BAUDRATE_TABLE	{ 9600, 19200, 38400, 57600, 115200 }
 
@@ -303,11 +308,11 @@
 #define CONFIG_EXTRA_ENV_SETTINGS				\
 	"loadaddr=" MK_STR(UIMAGE_LOADADDR) "\0"		\
 	"ethaddr=C0:B1:3C:88:88:88\0"				\
-	"ipaddr=172.17.4.221\0"					\
-	"serverip=172.17.0.1\0"					\
+	"ipaddr=192.168.0.3\0"					\
+	"serverip=192.168.0.1\0"					\
 	"image=networking.uImage\0"				\
 	"spiaddr=" MK_STR(CONFIG_ENV_IMG_OFFSET) "\0"		\
-	"spisize=3F0000\0"					\
+	"spisize=400000\0"					\
 	"spiprobe=sf probe " MK_STR(CONFIG_SPI_FLASH_BUS) "\0"	\
 	"addip=setenv bootargs ${bootargs}"			\
 	" ip=${ipaddr}:${serverip}:${gatewayip}:"		\

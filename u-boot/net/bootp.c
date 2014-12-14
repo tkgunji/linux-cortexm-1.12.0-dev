@@ -668,11 +668,15 @@ BootpRequest (void)
 	NetSetTimeout(SELECT_TIMEOUT, BootpTimeout);
 
 #if defined(CONFIG_CMD_DHCP)
+
+	printf("NetSetHandler(DhcpHandler) called\n");
 	dhcp_state = SELECTING;
 	NetSetHandler(DhcpHandler);
 #else
+	printf("NetSetHandler(BootpHandler) called\n");
 	NetSetHandler(BootpHandler);
 #endif
+	printf("NetSendPacket(NetTxPacket, pktlen) called\n");
 	NetSendPacket(NetTxPacket, pktlen);
 }
 
@@ -927,7 +931,10 @@ DhcpHandler(uchar * pkt, unsigned dest, unsigned src, unsigned len)
 #endif
 				}
 			}
-			TftpStart();
+			//printf(" Start TftpStart \n");
+			//TftpStart();
+			//printf(" End of TftpStart \n");
+			NetState = NETLOOP_SUCCESS;
 			return;
 		}
 		break;
@@ -943,6 +950,6 @@ DhcpHandler(uchar * pkt, unsigned dest, unsigned src, unsigned len)
 
 void DhcpRequest(void)
 {
-	BootpRequest();
+  BootpRequest();
 }
 #endif	/* CONFIG_CMD_DHCP */

@@ -1,4 +1,4 @@
-cmd_kernel/softirq.o := arm-uclinuxeabi-gcc -Wp,-MD,kernel/.softirq.o.d  -nostdinc -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -I/rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-m2s/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -Os -marm -mabi=aapcs-linux -mno-thumb-interwork -mthumb -Wa,-mimplicit-it=always -Wa,-mno-warn-deprecated -D__LINUX_ARM_ARCH__=7 -mcpu=cortex-m3 -Wa,-mcpu=cortex-m3 -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-dwarf2-cfi-asm -fconserve-stack   -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(softirq)"  -D"KBUILD_MODNAME=KBUILD_STR(softirq)"  -c -o kernel/softirq.o kernel/softirq.c
+cmd_kernel/softirq.o := arm-uclinuxeabi-gcc -Wp,-MD,kernel/.softirq.o.d  -nostdinc -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -I/rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-m2s/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -Os -marm -mabi=aapcs-linux -mno-thumb-interwork -mthumb -Wa,-mimplicit-it=always -Wa,-mno-warn-deprecated -D__LINUX_ARM_ARCH__=7 -mcpu=cortex-m3 -Wa,-mcpu=cortex-m3 -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-dwarf2-cfi-asm -fconserve-stack   -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(softirq)"  -D"KBUILD_MODNAME=KBUILD_STR(softirq)"  -c -o kernel/softirq.o kernel/softirq.c
 
 deps_kernel/softirq.o := \
   kernel/softirq.c \
@@ -41,24 +41,24 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/lbdaf.h) \
     $(wildcard include/config/phys/addr/t/64bit.h) \
     $(wildcard include/config/64bit.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/types.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/types.h \
   include/asm-generic/int-ll64.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/bitsperlong.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
   include/linux/posix_types.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/posix_types.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/processor.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/posix_types.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/processor.h \
     $(wildcard include/config/mmu.h) \
     $(wildcard include/config/cpu/v7m.h) \
     $(wildcard include/config/mpu.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/ptrace.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/ptrace.h \
     $(wildcard include/config/cpu/endian/be8.h) \
     $(wildcard include/config/arm/thumb.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/hwcap.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/cache.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/hwcap.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/cache.h \
     $(wildcard include/config/arm/l1/cache/shift.h) \
     $(wildcard include/config/aeabi.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/system.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/system.h \
     $(wildcard include/config/cpu/xsc3.h) \
     $(wildcard include/config/cpu/fa526.h) \
     $(wildcard include/config/arch/has/barriers.h) \
@@ -67,19 +67,19 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/arch/a2f.h) \
     $(wildcard include/config/cpu/32v6k.h) \
   include/linux/linkage.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/linkage.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/linkage.h \
   include/linux/irqflags.h \
     $(wildcard include/config/irqsoff/tracer.h) \
     $(wildcard include/config/preempt/tracer.h) \
     $(wildcard include/config/trace/irqflags/support.h) \
   include/linux/typecheck.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/irqflags.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/outercache.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/irqflags.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/outercache.h \
     $(wildcard include/config/outer/cache/sync.h) \
     $(wildcard include/config/outer/cache.h) \
   include/asm-generic/cmpxchg-local.h \
   include/linux/stat.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/stat.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/stat.h \
   include/linux/time.h \
     $(wildcard include/config/arch/uses/gettimeoffset.h) \
   include/linux/cache.h \
@@ -97,7 +97,7 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/generic/find/first/bit.h) \
     $(wildcard include/config/generic/find/last/bit.h) \
     $(wildcard include/config/generic/find/next/bit.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/bitops.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/bitops.h \
   include/asm-generic/bitops/non-atomic.h \
   include/asm-generic/bitops/fls64.h \
   include/asm-generic/bitops/sched.h \
@@ -107,12 +107,12 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/arch/has/ilog2/u32.h) \
     $(wildcard include/config/arch/has/ilog2/u64.h) \
   include/linux/dynamic_debug.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/byteorder.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/linux/swab.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/swab.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/swab.h \
   include/linux/byteorder/generic.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/bug.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   include/asm-generic/bug.h \
@@ -128,13 +128,13 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/preempt/notifiers.h) \
   include/linux/thread_info.h \
     $(wildcard include/config/compat.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/thread_info.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/thread_info.h \
     $(wildcard include/config/arm/thumbee.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/fpstate.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/fpstate.h \
     $(wildcard include/config/vfpv3.h) \
     $(wildcard include/config/vfpm.h) \
     $(wildcard include/config/iwmmxt.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/domain.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/domain.h \
     $(wildcard include/config/io/36.h) \
     $(wildcard include/config/cpu/use/domains.h) \
   include/linux/stringify.h \
@@ -149,12 +149,12 @@ deps_kernel/softirq.o := \
   include/linux/spinlock_up.h \
   include/linux/rwlock.h \
   include/linux/spinlock_api_up.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/atomic.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/atomic.h \
     $(wildcard include/config/generic/atomic64.h) \
   include/asm-generic/atomic64.h \
   include/asm-generic/atomic-long.h \
   include/linux/math64.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/div64.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/div64.h \
   include/linux/kmod.h \
   include/linux/gfp.h \
     $(wildcard include/config/kmemcheck.h) \
@@ -180,7 +180,7 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/holes/in/zone.h) \
     $(wildcard include/config/arch/has/holes/memorymodel.h) \
   include/linux/wait.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/current.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/current.h \
   include/linux/threads.h \
     $(wildcard include/config/nr/cpus.h) \
     $(wildcard include/config/base/small.h) \
@@ -192,12 +192,12 @@ deps_kernel/softirq.o := \
   include/linux/bitmap.h \
   include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/string.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/string.h \
   include/linux/pageblock-flags.h \
     $(wildcard include/config/hugetlb/page.h) \
     $(wildcard include/config/hugetlb/page/size/variable.h) \
   include/generated/bounds.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/page.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/page.h \
     $(wildcard include/config/cpu/copy/v3.h) \
     $(wildcard include/config/cpu/copy/v4wt.h) \
     $(wildcard include/config/cpu/copy/v4wb.h) \
@@ -205,9 +205,9 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/cpu/copy/fa.h) \
     $(wildcard include/config/cpu/xscale.h) \
     $(wildcard include/config/cpu/copy/v6.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/page-nommu.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/page-nommu.h \
     $(wildcard include/config/small/tasks.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/memory.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/memory.h \
     $(wildcard include/config/page/offset.h) \
     $(wildcard include/config/thumb2/kernel.h) \
     $(wildcard include/config/dram/size.h) \
@@ -215,7 +215,7 @@ deps_kernel/softirq.o := \
   include/linux/const.h \
   arch/arm/mach-m2s/include/mach/memory.h \
     $(wildcard include/config/m2s/cache.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/sizes.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/sizes.h \
   include/asm-generic/memory_model.h \
     $(wildcard include/config/sparsemem/vmemmap.h) \
   include/asm-generic/getorder.h \
@@ -224,7 +224,7 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/memory/hotremove.h) \
   include/linux/notifier.h \
   include/linux/errno.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/errno.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/errno.h \
   include/asm-generic/errno.h \
   include/asm-generic/errno-base.h \
   include/linux/mutex.h \
@@ -241,14 +241,14 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/debug/per/cpu/maps.h) \
     $(wildcard include/config/disable/obsolete/cpumask/functions.h) \
   include/linux/smp.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/topology.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/topology.h \
   include/asm-generic/topology.h \
   include/linux/mmdebug.h \
     $(wildcard include/config/debug/virtual.h) \
   include/linux/elf.h \
   include/linux/elf-em.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/elf.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/user.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/elf.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/user.h \
   include/linux/kobject.h \
   include/linux/sysfs.h \
   include/linux/kref.h \
@@ -263,7 +263,7 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/tiny/rcu.h) \
   include/linux/completion.h \
   include/linux/rcutree.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/local.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/local.h \
   include/asm-generic/local.h \
   include/linux/percpu.h \
     $(wildcard include/config/need/per/cpu/embed/first/chunk.h) \
@@ -282,11 +282,11 @@ deps_kernel/softirq.o := \
   include/trace/define_trace.h \
   include/linux/kmalloc_sizes.h \
   include/linux/pfn.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/percpu.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/percpu.h \
   include/asm-generic/percpu.h \
   include/linux/percpu-defs.h \
     $(wildcard include/config/debug/force/weak/per/cpu.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/module.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/module.h \
     $(wildcard include/config/arm/unwind.h) \
   include/trace/events/module.h \
   include/linux/kernel_stat.h \
@@ -300,8 +300,8 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/virt/cpu/accounting.h) \
   include/linux/ftrace_irq.h \
     $(wildcard include/config/ftrace/nmi/enter.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/hardirq.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/irq.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/hardirq.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/irq.h \
   arch/arm/mach-m2s/include/mach/irqs.h \
   include/linux/irq_cpustat.h \
   include/linux/hrtimer.h \
@@ -314,14 +314,14 @@ deps_kernel/softirq.o := \
   include/linux/jiffies.h \
   include/linux/timex.h \
   include/linux/param.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/param.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/param.h \
     $(wildcard include/config/hz.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/timex.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/timex.h \
   arch/arm/mach-m2s/include/mach/timex.h \
   include/linux/timer.h \
   include/linux/debugobjects.h \
     $(wildcard include/config/debug/objects/free.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/cputime.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/cputime.h \
   include/asm-generic/cputime.h \
   include/linux/irq.h \
     $(wildcard include/config/s390.h) \
@@ -333,9 +333,9 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/numa/irq/desc.h) \
     $(wildcard include/config/generic/hardirqs/no//do/irq.h) \
     $(wildcard include/config/cpumasks/offstack.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/irq_regs.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/irq_regs.h \
   include/asm-generic/irq_regs.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/hw_irq.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/hw_irq.h \
   include/linux/mm.h \
     $(wildcard include/config/sysctl.h) \
     $(wildcard include/config/stack/growsup.h) \
@@ -352,16 +352,16 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/mm/owner.h) \
     $(wildcard include/config/mmu/notifier.h) \
   include/linux/auxvec.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/auxvec.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/auxvec.h \
   include/linux/page-debug-flags.h \
     $(wildcard include/config/page/poisoning.h) \
     $(wildcard include/config/page/debug/something/else.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/mmu.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/mmu.h \
     $(wildcard include/config/cpu/has/asid.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/pgtable.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/pgtable.h \
     $(wildcard include/config/highpte.h) \
   include/asm-generic/4level-fixup.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/proc-fns.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/proc-fns.h \
     $(wildcard include/config/cpu/arm610.h) \
     $(wildcard include/config/cpu/arm7tdmi.h) \
     $(wildcard include/config/cpu/arm710.h) \
@@ -382,8 +382,8 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/cpu/feroceon.h) \
     $(wildcard include/config/cpu/v6.h) \
     $(wildcard include/config/cpu/v7.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/cpu-single.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/pgtable-nommu.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/cpu-single.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/pgtable-nommu.h \
   include/asm-generic/pgtable.h \
   include/linux/page-flags.h \
     $(wildcard include/config/pageflags/extended.h) \
@@ -442,13 +442,13 @@ deps_kernel/softirq.o := \
   include/linux/capability.h \
   include/linux/sem.h \
   include/linux/ipc.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/ipcbuf.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/sembuf.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/ipcbuf.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/sembuf.h \
   include/linux/signal.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/signal.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/signal.h \
   include/asm-generic/signal-defs.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/sigcontext.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/siginfo.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/sigcontext.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/siginfo.h \
   include/asm-generic/siginfo.h \
   include/linux/path.h \
   include/linux/pid.h \
@@ -462,7 +462,7 @@ deps_kernel/softirq.o := \
   include/linux/plist.h \
     $(wildcard include/config/debug/pi/list.h) \
   include/linux/resource.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/resource.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/resource.h \
   include/asm-generic/resource.h \
   include/linux/task_io_accounting.h \
     $(wildcard include/config/task/io/accounting.h) \
@@ -500,7 +500,7 @@ deps_kernel/softirq.o := \
     $(wildcard include/config/migration.h) \
   include/linux/limits.h \
   include/linux/ioctl.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/ioctl.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/ioctl.h \
   include/asm-generic/ioctl.h \
   include/linux/kdev_t.h \
   include/linux/dcache.h \
@@ -518,9 +518,9 @@ deps_kernel/softirq.o := \
   include/linux/sunrpc/msg_prot.h \
   include/linux/inet.h \
   include/linux/fcntl.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/fcntl.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/fcntl.h \
   include/asm-generic/fcntl.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/ftrace.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/ftrace.h \
   include/linux/tick.h \
     $(wildcard include/config/generic/clockevents.h) \
     $(wildcard include/config/generic/clockevents/broadcast.h) \
@@ -530,7 +530,7 @@ deps_kernel/softirq.o := \
   include/linux/clocksource.h \
     $(wildcard include/config/clocksource/watchdog.h) \
     $(wildcard include/config/generic/time/vsyscall.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/io.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/io.h \
   arch/arm/mach-m2s/include/mach/io.h \
   arch/arm/mach-m2s/include/mach/m2s.h \
   include/trace/events/irq.h \

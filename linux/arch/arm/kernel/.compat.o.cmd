@@ -1,4 +1,4 @@
-cmd_arch/arm/kernel/compat.o := arm-uclinuxeabi-gcc -Wp,-MD,arch/arm/kernel/.compat.o.d  -nostdinc -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -I/rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-m2s/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -Os -marm -mabi=aapcs-linux -mno-thumb-interwork -mthumb -Wa,-mimplicit-it=always -Wa,-mno-warn-deprecated -D__LINUX_ARM_ARCH__=7 -mcpu=cortex-m3 -Wa,-mcpu=cortex-m3 -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-dwarf2-cfi-asm -fconserve-stack   -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(compat)"  -D"KBUILD_MODNAME=KBUILD_STR(compat)"  -c -o arch/arm/kernel/compat.o arch/arm/kernel/compat.c
+cmd_arch/arm/kernel/compat.o := arm-uclinuxeabi-gcc -Wp,-MD,arch/arm/kernel/.compat.o.d  -nostdinc -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -I/rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-m2s/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -Os -marm -mabi=aapcs-linux -mno-thumb-interwork -mthumb -Wa,-mimplicit-it=always -Wa,-mno-warn-deprecated -D__LINUX_ARM_ARCH__=7 -mcpu=cortex-m3 -Wa,-mcpu=cortex-m3 -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-dwarf2-cfi-asm -fconserve-stack   -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(compat)"  -D"KBUILD_MODNAME=KBUILD_STR(compat)"  -c -o arch/arm/kernel/compat.o arch/arm/kernel/compat.c
 
 deps_arch/arm/kernel/compat.o := \
   arch/arm/kernel/compat.c \
@@ -11,9 +11,9 @@ deps_arch/arm/kernel/compat.o := \
     $(wildcard include/config/lbdaf.h) \
     $(wildcard include/config/phys/addr/t/64bit.h) \
     $(wildcard include/config/64bit.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/types.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/types.h \
   include/asm-generic/int-ll64.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/bitsperlong.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
   include/linux/posix_types.h \
   include/linux/stddef.h \
@@ -26,7 +26,7 @@ deps_arch/arm/kernel/compat.o := \
     $(wildcard include/config/arch/supports/optimized/inlining.h) \
     $(wildcard include/config/optimize/inlining.h) \
   include/linux/compiler-gcc4.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/posix_types.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/posix_types.h \
   include/linux/kernel.h \
     $(wildcard include/config/preempt/voluntary.h) \
     $(wildcard include/config/debug/spinlock/sleep.h) \
@@ -39,14 +39,14 @@ deps_arch/arm/kernel/compat.o := \
     $(wildcard include/config/ftrace/mcount/record.h) \
   /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include/stdarg.h \
   include/linux/linkage.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/linkage.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/linkage.h \
   include/linux/bitops.h \
     $(wildcard include/config/generic/find/first/bit.h) \
     $(wildcard include/config/generic/find/last/bit.h) \
     $(wildcard include/config/generic/find/next/bit.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/bitops.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/bitops.h \
     $(wildcard include/config/smp.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/system.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/system.h \
     $(wildcard include/config/cpu/xsc3.h) \
     $(wildcard include/config/cpu/fa526.h) \
     $(wildcard include/config/arch/has/barriers.h) \
@@ -61,12 +61,12 @@ deps_arch/arm/kernel/compat.o := \
     $(wildcard include/config/preempt/tracer.h) \
     $(wildcard include/config/trace/irqflags/support.h) \
   include/linux/typecheck.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/irqflags.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/ptrace.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/irqflags.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/ptrace.h \
     $(wildcard include/config/cpu/endian/be8.h) \
     $(wildcard include/config/arm/thumb.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/hwcap.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/outercache.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/hwcap.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/outercache.h \
     $(wildcard include/config/outer/cache/sync.h) \
     $(wildcard include/config/outer/cache.h) \
   include/asm-generic/cmpxchg-local.h \
@@ -79,12 +79,12 @@ deps_arch/arm/kernel/compat.o := \
     $(wildcard include/config/arch/has/ilog2/u32.h) \
     $(wildcard include/config/arch/has/ilog2/u64.h) \
   include/linux/dynamic_debug.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/byteorder.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/linux/swab.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/swab.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/swab.h \
   include/linux/byteorder/generic.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/bug.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   include/asm-generic/bug.h \
@@ -92,13 +92,13 @@ deps_arch/arm/kernel/compat.o := \
     $(wildcard include/config/generic/bug/relative/pointers.h) \
   include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/string.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/string.h \
   include/linux/init.h \
     $(wildcard include/config/modules.h) \
     $(wildcard include/config/hotplug.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/setup.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/setup.h \
     $(wildcard include/config/arch/lh7a40x.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/mach-types.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/mach-types.h \
   include/generated/mach-types.h \
     $(wildcard include/config/arch/ebsa110.h) \
     $(wildcard include/config/arch/rpc.h) \
@@ -2767,7 +2767,7 @@ deps_arch/arm/kernel/compat.o := \
     $(wildcard include/config/mach/kinetis.h) \
     $(wildcard include/config/mach/lpc18xx.h) \
     $(wildcard include/config/mach/m2s.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/page.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/page.h \
     $(wildcard include/config/mmu.h) \
     $(wildcard include/config/cpu/copy/v3.h) \
     $(wildcard include/config/cpu/copy/v4wt.h) \
@@ -2777,9 +2777,9 @@ deps_arch/arm/kernel/compat.o := \
     $(wildcard include/config/cpu/xscale.h) \
     $(wildcard include/config/cpu/copy/v6.h) \
     $(wildcard include/config/sparsemem.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/page-nommu.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/page-nommu.h \
     $(wildcard include/config/small/tasks.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/memory.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/memory.h \
     $(wildcard include/config/page/offset.h) \
     $(wildcard include/config/thumb2/kernel.h) \
     $(wildcard include/config/highmem.h) \
@@ -2790,12 +2790,12 @@ deps_arch/arm/kernel/compat.o := \
   include/linux/const.h \
   arch/arm/mach-m2s/include/mach/memory.h \
     $(wildcard include/config/m2s/cache.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/sizes.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/sizes.h \
   include/asm-generic/memory_model.h \
     $(wildcard include/config/flatmem.h) \
     $(wildcard include/config/sparsemem/vmemmap.h) \
   include/asm-generic/getorder.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/mach/arch.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/mach/arch.h \
   arch/arm/kernel/compat.h \
 
 arch/arm/kernel/compat.o: $(deps_arch/arm/kernel/compat.o)

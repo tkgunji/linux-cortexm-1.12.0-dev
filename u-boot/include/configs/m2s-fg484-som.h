@@ -51,7 +51,8 @@
  * known way (as of yet) to read them in run time. Hence,
  * we define them as build-time constants
  */
-#define CONFIG_SYS_M2S_SYSREF		166000000
+#define CONFIG_SYS_M2S_SYSREF		160000000
+//#define CONFIG_SYS_M2S_SYSREF		150000000
 
 /*
  * This is a specific revision of the board
@@ -89,6 +90,13 @@
  * Number of clock ticks in 1 sec
  */
 #define CONFIG_SYS_HZ			1000
+
+
+/* 
+ * TAKU: Try to ebable bootloader executation 
+ */
+//#define CONFIG_CMD_BOOTLDR
+
 
 /*
  * Enable/disable h/w watchdog
@@ -160,6 +168,7 @@
 
 #define CONFIG_SPI_FLASH		1
 #define CONFIG_SPI_FLASH_SPANSION	1
+#define CONFIG_SPI_FLASH_WINBOND	1
 #define CONFIG_SPI_FLASH_BUS		0
 #define CONFIG_SPI_FLASH_CS		0
 #define CONFIG_SPI_FLASH_MODE		3
@@ -198,7 +207,8 @@
 #define CONFIG_SYS_NS16550_REG_SIZE	(-4)
 #define CONFIG_SYS_NS16550_CLK		clock_get(CLOCK_PCLK0)
 #define CONFIG_CONS_INDEX		1
-#define CONFIG_SYS_NS16550_COM1		0x40000000
+//#define CONFIG_SYS_NS16550_COM1		0x40000000
+#define CONFIG_SYS_NS16550_COM1		0x40010000
 #define CONFIG_BAUDRATE			115200
 #define CONFIG_SYS_BAUDRATE_TABLE	{ 9600, 19200, 38400, 57600, 115200 }
 
@@ -218,8 +228,10 @@
  */
 #define CONFIG_NET_MULTI
 #define CONFIG_M2S_ETH
+#define CONFIG_M2S_ETH_MODE_SGMII
 
 #define CONFIG_SYS_RX_ETH_BUFFER	2
+//#define CONFIG_PHY_GIGE         1 
 
 /*
  * Use standard MII PHY API
@@ -263,6 +275,8 @@
 #define CONFIG_CMD_LOADS
 #undef CONFIG_CMD_MISC
 #define CONFIG_CMD_NET
+#define CONFIG_CMD_PING
+#define CONFIG_CMD_DHCP
 #undef CONFIG_CMD_NFS
 #undef CONFIG_CMD_SOURCE
 #undef CONFIG_CMD_XIMG
@@ -305,9 +319,9 @@
  */
 #define CONFIG_EXTRA_ENV_SETTINGS				\
 	"loadaddr=" MK_STR(UIMAGE_LOADADDR) "\0"		\
-	"ethaddr=C0:B1:3C:83:83:83\0"				\
-	"ipaddr=172.17.4.219\0"					\
-	"serverip=172.17.0.1\0"					\
+	"ethaddr=C0:B1:3C:88:88:88\0"				\
+	"ipaddr=192.168.0.3\0"					\
+	"serverip=192.168.0.1\0"					\
 	"image=networking.uImage\0"				\
 	"spiaddr=" MK_STR(CONFIG_ENV_IMG_OFFSET) "\0"		\
 	"spisize=400000\0"					\

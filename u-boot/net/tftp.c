@@ -577,7 +577,7 @@ TftpStart (void)
 	printf ("Using %s device\n", eth_get_name());
 #endif
 	printf("TFTP from server %pI4"
-		"; our IP address is %pI4", &TftpServerIP, &NetOurIP);
+	       "; our IP address is %pI4", &TftpServerIP, &NetOurIP);
 
 	/* Check if we need to send across this subnet */
 	if (NetOurGatewayIP && NetOurSubnetMask) {

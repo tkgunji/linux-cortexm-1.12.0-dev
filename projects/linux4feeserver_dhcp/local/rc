@@ -1,0 +1,24 @@
+#!/bin/sh
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devpts none /dev/pts
+mkdir /mnt
+#mount -o nolock,rsize=1024 172.17.0.1:/home/vlad/test/HEAD/projects /mnt
+ifconfig lo 127.0.0.1
+# ifconfig eth0 172.17.0.199
+udhcpc
+telnetd
+insmod /tpc/sample2.ko
+insmod /tpc/radmon.ko
+insmod /tpc/sht25.ko
+dropbear
+ntpd -p 192.168.0.1
+sleep 10
+echo "Welcome to s2m-som Cortex-M3 Linux!"
+source /etc/profile
+echo "DIM_DNS_NODE = ${DIM_DNS_NODE}" 
+echo "FEE_SERVER_NAME = ${FEE_SERVER_NAME}" 
+mount -o nolock,rsize=1024 192.168.0.1:/rcu2 /mnt/
+#/mnt/feeserver_rcu2/bin/arm/feeserver_rcu2
+
+

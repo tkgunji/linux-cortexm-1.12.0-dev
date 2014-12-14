@@ -1,0 +1,9 @@
+# /etc/profile: system-wide .profile file for the Bourne shells
+
+echo
+echo -n "Processing /etc/profile... "
+# no-op
+export DIM_DNS_NODE=alicns03
+export DIM_DNS_PORT=6000
+echo "Done"
+echo

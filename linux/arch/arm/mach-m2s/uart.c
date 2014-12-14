@@ -182,7 +182,7 @@ void __init m2s_uart_init(void)
 static int __init m2s_add_console(void) {
 	int	p = m2s_platform_get();
 
-	if (p == PLATFORM_SF2_DEV_KIT) {
+	if (p == PLATFORM_SF2_DEV_KIT || p == PLATFORM_M2S_FG484_SOM) {
 		/*
 		 * Set UART1 as a preferred console. If the only UART1 port
 		 * is enabled, then it corresponds to the ttyS0 console name,

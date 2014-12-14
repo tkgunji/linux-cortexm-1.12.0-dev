@@ -85,9 +85,59 @@
 
 DECLARE_GLOBAL_DATA_PTR;
 
+
+//////
+//// include SERDES part
+
+extern void configure_zl30362(void);
+
+//#define SERDES0_LANE3_REGS      0x40029c00
+#define SERDES0_LANE3_REGS      0x40028000
+#define TX_PST_RATIO            0x1c28
+
+
+
 int board_init(void)
 {
-	return 0;
+
+  printf("Board Init\n");;
+
+
+  /* some magic from the Libero design generated source code                                                                        
+     to get the PHY working in the SGMII mode */
+  //  *(volatile uint32_t*)(SERDES0_LANE3_REGS + TX_PST_RATIO) = 0x0;
+
+  *(volatile uint32_t*)( 0x40028000 + 0x2028 ) =  0x80F ; /* SYSTEM_CONFIG_PHY_MODE_1 */ 
+  *(volatile uint32_t*)( 0x40028000 + 0x1d98 ) =  0x30 ; /* LANE3_PHY_RESET_OVERRIDE */
+  *(volatile uint32_t*)( 0x40028000 + 0x1c00 ) =  0x80 ; /* LANE3_CR0 */ 
+  *(volatile uint32_t*)( 0x40028000 + 0x1c04 ) =  0x20 ; /* LANE3_ERRCNT_DEC */
+  *(volatile uint32_t*)( 0x40028000 + 0x1c08 ) =  0xF8 ; /* LANE3_RXIDLE_MAX_ERRCNT_THR */ 
+  *(volatile uint32_t*)( 0x40028000 + 0x1c0c ) =  0x80 ; /* LANE3_IMPED_RATIO */ 
+  *(volatile uint32_t*)( 0x40028000 + 0x1c14 ) =  0x29 ; /* LANE3_PLL_M_N */ 
+  *(volatile uint32_t*)( 0x40028000 + 0x1c18 ) =  0x20 ; /* LANE3_CNT250NS_MAX */ 
+  *(volatile uint32_t*)( 0x40028000 + 0x1c24 ) =  0x80 ; /* LANE3_TX_AMP_RATIO */ 
+  *(volatile uint32_t*)( 0x40028000 + 0x1c30 ) =  0x10 ; /* LANE3_ENDCALIB_MAX */ 
+  *(volatile uint32_t*)( 0x40028000 + 0x1c34 ) =  0x38 ; /* LANE3_CALIB_STABILITY_COUNT */
+  *(volatile uint32_t*)( 0x40028000 + 0x1c3c ) =  0x70 ; /* LANE3_RX_OFFSET_COUNT */
+  *(volatile uint32_t*)( 0x40028000 + 0x1dd4 ) =  0x2 ; /* LANE3_GEN1_TX_PLL_CCP */ 
+  *(volatile uint32_t*)( 0x40028000 + 0x1dd8 ) =  0x22 ; /* LANE3_GEN1_RX_PLL_CCP */
+  *(volatile uint32_t*)( 0x40028000 + 0x1d98 ) =  0x0 ; /* LANE3_PHY_RESET_OVERRIDE */
+  *(volatile uint32_t*)( 0x40028000 + 0x1e00 ) =  0x1 ; /* LANE3_UPDATE_SETTINGS */
+  *(volatile uint32_t*)( 0x40028000 + 0x2028 ) =  0xF0F ; /* SYSTEM_CONFIG_PHY_MODE_1 */
+
+  /* configure the ZL30362 Clock Network Synchronizer                                                                                    (required for Ethernet to function in U-boot and Linux) */
+  //configure_zl30362();
+  CORE_SF2_CFG->config_done = 1u; /* Signal to CoreSF2Reset that peripheral                                                         
+                                           configuration registers have                                                                   
+                                           been written.*/
+#if 0 /* FIXME: init_done is never signalled after a soft reset                                                                           
+	   if the DDR has been initialized before the reset. */
+  while(!CORE_SF2_CFG->init_done)
+    {
+      ;   /* Wait for INIT_DONE from CoreSF2Reset. */
+    }
+#endif
+  return 0;
 }
 
 int checkboard(void)

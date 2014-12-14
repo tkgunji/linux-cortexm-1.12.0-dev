@@ -109,11 +109,12 @@ been enabled, more detailed usage information will also be available.</p>
 <p>Currently available applets include:</p>
 <pre>
         [, [[, cat, chmod, chown, cp, cttyhack, date, dd, depmod,
-        dnsdomainname, echo, halt, hostname, hush, ifconfig, init, insmod,
-        kill, ln, login, ls, lsmod, mkdir, mknod, modinfo, modprobe, mount,
-        mv, netstat, nslookup, ntpd, ping, poweroff, ps, pwd, reboot, rm,
-        rmmod, route, sh, sleep, telnet, telnetd, test, traceroute, udhcpc,
-        umount, vi, wc, wget</pre>
+        dnsdomainname, echo, env, ftpget, ftpput, halt, hostname, httpd,
+        hush, ifconfig, init, insmod, kill, ln, login, ls, lsmod, mdev,
+        mkdir, mknod, modinfo, modprobe, mount, mv, netstat, nslookup, ntpd,
+        ping, poweroff, printenv, ps, pwd, reboot, rm, rmmod, route, sh,
+        sleep, telnet, telnetd, test, tftp, top, traceroute, udhcpc, umount,
+        uudecode, uuencode, vi, wc, wget</pre>
 <p>
 </p>
 <hr />
@@ -292,6 +293,63 @@ MD (x1000000), M (x1048576), GD (x1000000000) or G (x1073741824)</p>
         -E      Don't interpret backslash escapes (default)</pre>
 </dd>
 </li>
+<dt><strong><a name="item_env"><strong>env</strong></a></strong>
+
+<dd>
+<p>env [-iu] [-] [name=value]... [PROG ARGS]</p>
+</dd>
+<dd>
+<p>Print the current environment or run PROG after setting up
+the specified environment</p>
+</dd>
+<dd>
+<p>Options:</p>
+</dd>
+<dd>
+<pre>
+        -, -i   Start with an empty environment
+        -u      Remove variable from the environment</pre>
+</dd>
+</li>
+<dt><strong><a name="item_ftpget"><strong>ftpget</strong></a></strong>
+
+<dd>
+<p>ftpget [OPTIONS] HOST [LOCAL_FILE] REMOTE_FILE</p>
+</dd>
+<dd>
+<p>Retrieve a remote file via FTP</p>
+</dd>
+<dd>
+<p>Options:</p>
+</dd>
+<dd>
+<pre>
+        -c      Continue previous transfer
+        -v      Verbose
+        -u      Username
+        -p      Password
+        -P      Port number</pre>
+</dd>
+</li>
+<dt><strong><a name="item_ftpput"><strong>ftpput</strong></a></strong>
+
+<dd>
+<p>ftpput [OPTIONS] HOST [REMOTE_FILE] LOCAL_FILE</p>
+</dd>
+<dd>
+<p>Store a local file on a remote machine via FTP</p>
+</dd>
+<dd>
+<p>Options:</p>
+</dd>
+<dd>
+<pre>
+        -v      Verbose
+        -u      Username
+        -p      Password
+        -P      Port number</pre>
+</dd>
+</li>
 <dt><strong><a name="item_halt"><strong>halt</strong></a></strong>
 
 <dd>
@@ -328,6 +386,33 @@ MD (x1000000), M (x1048576), GD (x1000000000) or G (x1073741824)</p>
         -d      DNS domain name
         -f      Fully qualified domain name
         -F FILE Use FILE's content as hostname</pre>
+</dd>
+</li>
+<dt><strong><a name="item_httpd"><strong>httpd</strong></a></strong>
+
+<dd>
+<p>httpd [-ifv[v]] [-c CONFFILE] [-p [IP:]PORT] [-u USER[:GRP]] [-r REALM] [-h HOME]
+or httpd -d/-e/-m STRING</p>
+</dd>
+<dd>
+<p>Listen for incoming HTTP requests</p>
+</dd>
+<dd>
+<p>Options:</p>
+</dd>
+<dd>
+<pre>
+        -i              Inetd mode
+        -f              Don't daemonize
+        -v[v]           Verbose
+        -p [IP:]PORT    Bind to ip:port (default *:80)
+        -u USER[:GRP]   Set uid/gid after binding to port
+        -r REALM        Authentication Realm for Basic Authentication
+        -h HOME         Home directory (default .)
+        -c FILE         Configuration file (default {/etc,HOME}/httpd.conf)
+        -m STRING       MD5 crypt STRING
+        -e STRING       HTML encode STRING
+        -d STRING       URL decode STRING</pre>
 </dd>
 </li>
 <dt><strong><a name="item_ifconfig"><strong>ifconfig</strong></a></strong>
@@ -470,6 +555,22 @@ MD (x1000000), M (x1048576), GD (x1000000000) or G (x1073741824)</p>
 </dd>
 <dd>
 <p>List the currently loaded kernel modules</p>
+</dd>
+</li>
+<dt><strong><a name="item_mdev"><strong>mdev</strong></a></strong>
+
+<dd>
+<p>mdev [-s]</p>
+</dd>
+<dd>
+<pre>
+        -s      Scan /sys and populate /dev during system boot</pre>
+</dd>
+<dd>
+<p>It can be run by kernel as a hotplug helper. To activate it:
+ echo /sbin/mdev &gt; /proc/sys/kernel/hotplug
+It uses /etc/mdev.conf with lines
+[-]DEVNAME UID:GID PERM [&gt;|=PATH] [@|$|*PROG]</p>
 </dd>
 </li>
 <dt><strong><a name="item_mkdir"><strong>mkdir</strong></a></strong>
@@ -693,6 +794,16 @@ optionally using a specified DNS server</p>
         -f      Force power off (don't go through init)</pre>
 </dd>
 </li>
+<dt><strong><a name="item_printenv"><strong>printenv</strong></a></strong>
+
+<dd>
+<p>printenv [VARIABLE]...</p>
+</dd>
+<dd>
+<p>Print environment VARIABLEs.
+If no VARIABLE specified, print all.</p>
+</dd>
+</li>
 <dt><strong><a name="item_ps"><strong>ps</strong></a></strong>
 
 <dd>
@@ -849,6 +960,37 @@ optionally using a specified DNS server</p>
 depending on logical value of EXPRESSION</p>
 </dd>
 </li>
+<dt><strong><a name="item_tftp"><strong>tftp</strong></a></strong>
+
+<dd>
+<p>tftp [OPTIONS] HOST [PORT]</p>
+</dd>
+<dd>
+<p>Transfer a file from/to tftp server</p>
+</dd>
+<dd>
+<p>Options:</p>
+</dd>
+<dd>
+<pre>
+        -l FILE Local FILE
+        -r FILE Remote FILE
+        -g      Get file
+        -p      Put file
+        -b SIZE Transfer blocks of SIZE octets</pre>
+</dd>
+</li>
+<dt><strong><a name="item_top"><strong>top</strong></a></strong>
+
+<dd>
+<p>top [-b] [-nCOUNT] [-dSECONDS] [-m]</p>
+</dd>
+<dd>
+<p>Provide a view of process activity in real time.
+Read the status of all processes from /proc each SECONDS
+and display a screenful of them.</p>
+</dd>
+</li>
 <dt><strong><a name="item_traceroute"><strong>traceroute</strong></a></strong>
 
 <dd>
@@ -929,6 +1071,32 @@ depending on logical value of EXPRESSION</p>
         -r      Try to remount devices as read-only if mount is busy
         -l      Lazy umount (detach filesystem)
         -f      Force umount (i.e., unreachable NFS server)</pre>
+</dd>
+</li>
+<dt><strong><a name="item_uudecode"><strong>uudecode</strong></a></strong>
+
+<dd>
+<p>uudecode [-o OUTFILE] [INFILE]</p>
+</dd>
+<dd>
+<p>Uudecode a file
+Finds outfile name in uuencoded source unless -o is given</p>
+</dd>
+</li>
+<dt><strong><a name="item_uuencode"><strong>uuencode</strong></a></strong>
+
+<dd>
+<p>uuencode [-m] [INFILE] STORED_FILENAME</p>
+</dd>
+<dd>
+<p>Uuencode a file to stdout</p>
+</dd>
+<dd>
+<p>Options:</p>
+</dd>
+<dd>
+<pre>
+        -m      Use base64 encoding per RFC1521</pre>
 </dd>
 </li>
 <dt><strong><a name="item_vi"><strong>vi</strong></a></strong>

@@ -259,20 +259,20 @@ int date_main(int argc UNUSED_PARAM, char **argv)
 			i = 8 + 3 * ifmt;
 			if (ifmt != 0) {
 				/* TODO: if (ifmt==4) i += sprintf(&fmt_dt2str[i], ",%09u", nanoseconds); */
- format_utc:
-				fmt_dt2str[i++] = '%';
-				fmt_dt2str[i++] = (opt & OPT_UTC) ? 'Z' : 'z';
+			format_utc:
+			  fmt_dt2str[i++] = '%';
+			  fmt_dt2str[i++] = (opt & OPT_UTC) ? 'Z' : 'z';
 			}
 			fmt_dt2str[i] = '\0';
 		} else if (opt & OPT_RFC2822) {
-			/* -R. undo busybox.c setlocale */
-			if (ENABLE_LOCALE_SUPPORT)
-				setlocale(LC_TIME, "C");
-			strcpy(fmt_dt2str, "%a, %d %b %Y %H:%M:%S ");
-			i = sizeof("%a, %d %b %Y %H:%M:%S ")-1;
-			goto format_utc;
+		  /* -R. undo busybox.c setlocale */
+		  if (ENABLE_LOCALE_SUPPORT)
+		    setlocale(LC_TIME, "C");
+		  strcpy(fmt_dt2str, "%a, %d %b %Y %H:%M:%S ");
+		  i = sizeof("%a, %d %b %Y %H:%M:%S ")-1;
+		  goto format_utc;
 		} else { /* default case */
-			fmt_dt2str = (char*)"%a %b %e %H:%M:%S %Z %Y";
+		  fmt_dt2str = (char*)"%a %b %e %H:%M:%S %Z %Y";
 		}
 	}
 #if ENABLE_FEATURE_DATE_NANO

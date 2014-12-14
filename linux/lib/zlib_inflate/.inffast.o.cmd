@@ -1,4 +1,4 @@
-cmd_lib/zlib_inflate/inffast.o := arm-uclinuxeabi-gcc -Wp,-MD,lib/zlib_inflate/.inffast.o.d  -nostdinc -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -I/rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-m2s/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -Os -marm -mabi=aapcs-linux -mno-thumb-interwork -mthumb -Wa,-mimplicit-it=always -Wa,-mno-warn-deprecated -D__LINUX_ARM_ARCH__=7 -mcpu=cortex-m3 -Wa,-mcpu=cortex-m3 -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-dwarf2-cfi-asm -fconserve-stack   -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(inffast)"  -D"KBUILD_MODNAME=KBUILD_STR(zlib_inflate)"  -c -o lib/zlib_inflate/inffast.o lib/zlib_inflate/inffast.c
+cmd_lib/zlib_inflate/inffast.o := arm-uclinuxeabi-gcc -Wp,-MD,lib/zlib_inflate/.inffast.o.d  -nostdinc -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -I/rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-m2s/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -Os -marm -mabi=aapcs-linux -mno-thumb-interwork -mthumb -Wa,-mimplicit-it=always -Wa,-mno-warn-deprecated -D__LINUX_ARM_ARCH__=7 -mcpu=cortex-m3 -Wa,-mcpu=cortex-m3 -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-dwarf2-cfi-asm -fconserve-stack   -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(inffast)"  -D"KBUILD_MODNAME=KBUILD_STR(zlib_inflate)"  -c -o lib/zlib_inflate/inffast.o lib/zlib_inflate/inffast.c
 
 deps_lib/zlib_inflate/inffast.o := \
   lib/zlib_inflate/inffast.c \
@@ -22,15 +22,15 @@ deps_lib/zlib_inflate/inffast.o := \
     $(wildcard include/config/lbdaf.h) \
     $(wildcard include/config/phys/addr/t/64bit.h) \
     $(wildcard include/config/64bit.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/types.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/types.h \
   include/asm-generic/int-ll64.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/bitsperlong.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
   include/linux/posix_types.h \
   include/linux/stddef.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/posix_types.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/posix_types.h \
   /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include/stdarg.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/string.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/string.h \
   include/linux/kernel.h \
     $(wildcard include/config/preempt/voluntary.h) \
     $(wildcard include/config/debug/spinlock/sleep.h) \
@@ -42,14 +42,14 @@ deps_lib/zlib_inflate/inffast.o := \
     $(wildcard include/config/numa.h) \
     $(wildcard include/config/ftrace/mcount/record.h) \
   include/linux/linkage.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/linkage.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/linkage.h \
   include/linux/bitops.h \
     $(wildcard include/config/generic/find/first/bit.h) \
     $(wildcard include/config/generic/find/last/bit.h) \
     $(wildcard include/config/generic/find/next/bit.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/bitops.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/bitops.h \
     $(wildcard include/config/smp.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/system.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/system.h \
     $(wildcard include/config/cpu/xsc3.h) \
     $(wildcard include/config/cpu/fa526.h) \
     $(wildcard include/config/arch/has/barriers.h) \
@@ -64,12 +64,12 @@ deps_lib/zlib_inflate/inffast.o := \
     $(wildcard include/config/preempt/tracer.h) \
     $(wildcard include/config/trace/irqflags/support.h) \
   include/linux/typecheck.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/irqflags.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/ptrace.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/irqflags.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/ptrace.h \
     $(wildcard include/config/cpu/endian/be8.h) \
     $(wildcard include/config/arm/thumb.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/hwcap.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/outercache.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/hwcap.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/outercache.h \
     $(wildcard include/config/outer/cache/sync.h) \
     $(wildcard include/config/outer/cache.h) \
   include/asm-generic/cmpxchg-local.h \
@@ -82,12 +82,12 @@ deps_lib/zlib_inflate/inffast.o := \
     $(wildcard include/config/arch/has/ilog2/u32.h) \
     $(wildcard include/config/arch/has/ilog2/u64.h) \
   include/linux/dynamic_debug.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/byteorder.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/linux/swab.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/swab.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/swab.h \
   include/linux/byteorder/generic.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/bug.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   include/asm-generic/bug.h \

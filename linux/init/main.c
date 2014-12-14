@@ -228,14 +228,16 @@ EXPORT_SYMBOL(loops_per_jiffy);
 
 static int __init debug_kernel(char *str)
 {
-	console_loglevel = 10;
-	return 0;
+  printk(KERN_NOTICE "debug_kernel\n");
+  console_loglevel = 10;
+  return 0;
 }
 
 static int __init quiet_kernel(char *str)
 {
-	console_loglevel = 4;
-	return 0;
+  printk(KERN_NOTICE "quiet_kernel\n");
+  console_loglevel = 4;
+  return 0;
 }
 
 early_param("debug", debug_kernel);
@@ -312,7 +314,7 @@ int __read_mostly debug_pagealloc_enabled = 0;
 static int __init init_setup(char *str)
 {
 	unsigned int i;
-
+	printk(KERN_NOTICE "init_setup\n");
 	execute_command = str;
 	/*
 	 * In case LILO is going to boot us with default command line,
@@ -514,6 +516,7 @@ asmlinkage void __init start_kernel(void)
 	char * command_line;
 	extern struct kernel_param __start___param[], __stop___param[];
 
+	printk(KERN_NOTICE "start kernel\n");
 	smp_setup_processor_id();
 
 	/*

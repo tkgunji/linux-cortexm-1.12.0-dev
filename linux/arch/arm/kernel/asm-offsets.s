@@ -14,7 +14,7 @@
 @	compiled by GNU C version 4.3.2, GMP version 4.3.1, MPFR version 2.4.2.
 @ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 @ options passed:  -nostdinc
-@ -I/rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include -Iinclude
+@ -I/rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include -Iinclude
 @ -Iarch/arm/mach-m2s/include -imultilib thumb2 -iprefix
 @ /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/
 @ -isysroot

@@ -101,10 +101,16 @@ slink /bin/traceroute busybox 777 0 0
 slink /bin/wget busybox 777 0 0
 slink /bin/vi busybox 777 0 0
 slink /bin/udhcpc busybox 777 0 0
+slink /bin/tftp busybox 777 0 0
+slink /bin/ftpget busybox 777 0 0
+slink /bin/ftpput busybox 777 0 0
+slink /bin/mdev busybox 777 0 0
+
 ifarch A2F file /bin/iap_tool ${INSTALL_ROOT}/A2F/root/usr/bin/iap_tool 755 0 0
 
 dir /usr 755 0 0
 dir /usr/bin 755 0 0
+dir /usr/sbin 755 0 0
 dir /usr/share 755 0 0
 dir /usr/share/udhcpc 755 0 0
 file /usr/share/udhcpc/default.script ${INSTALL_ROOT}/projects/${SAMPLE}/local/default.script 755 0 0
@@ -120,6 +126,8 @@ nod /dev/sample 0600 0 0 c 166 0
 file /tpc/simple /rcu2/rcu2linuxtest/rculinux-2.0/build/src/simple 755 0 0 
 file /tpc/rcubus_driver.ko /rcu2/rcu2linuxtest/rculinux-2.0/build/drivers/rcubus_driver.ko 755 0 0
 nod /dev/dcsc 0600 0 0 c 150 0
+file /tpc/peekpoke /rcu2/app_cortexm3/peekpoke/peekpoke 755 0 0
+file /tpc/exec.sh /rcu2/app_cortexm3/peekpoke/exec.sh 755 0 0
 
 # Dropbear ssh server
 dir /etc/dropbear 0755 0 0

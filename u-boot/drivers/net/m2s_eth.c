@@ -336,7 +336,7 @@ static volatile struct m2s_eth_dma_bd	m2s_bd_rx[M2S_RX_BD_NUM];
  */
 static u8			m2s_buf_rx[M2S_RX_BD_NUM][M2S_FRM_MAX_LEN];
 
-#define M88E1340_PHY_ADDR 0
+#define M88E1340_PHY_ADDR 0x00
 #define SF2_MSGMII_PHY_ADDR 0x1e
 
 /* M88E1340 PHY registers */
@@ -386,6 +386,8 @@ static int msgmii_phy_init(void)
 	u16 val;
 	int rv;
 
+	printf("msgmii_phy_init\n");
+
 	/* Reset M-SGMII. */
 	rv = miiphy_write(M2S_MII_NAME, SF2_MSGMII_PHY_ADDR, 0x00, 0x9000u);
 	if (rv != 0) {
@@ -416,6 +418,8 @@ static int m881340_phy_set_link_speed(void)
 {
 	u16 val;
 	int rv;
+	printf("m881340_phy_set_link_speed\n");
+
         /* Set auto-negotiation advertisement. */
 	/* Set 10Mbps and 100Mbps advertisement. */
 	rv = miiphy_read(M2S_MII_NAME, M88E1340_PHY_ADDR, MII_ADVERTISE, &val);
@@ -454,9 +458,11 @@ static int msgmii_phy_autonegotiate(void)
 	u16 val;
 	int timeout;
 
+	printf("msgmii_phy_autonegotiate\n");
+
 	/* Enable auto-negotiation. */
 	rv = miiphy_write(M2S_MII_NAME, M88E1340_PHY_ADDR,
-			M88E1340_EXT_ADDR_PAGE_CR, PAGE_0);
+			  M88E1340_EXT_ADDR_PAGE_CR, PAGE_0);
 	if (rv != 0) {
 		goto out;
 	}
@@ -499,6 +505,9 @@ static int msgmii_phy_autonegotiate(void)
 		break;
 	}
 
+	printf("msgmii_phy_autonegotiate speed = 0x%x, 0x%x\n", val, m2s_mii_speed);
+
+
 	if (timeout <= 0) {
 		printf("%s %d %s marvel autoneg failed by timeout %02x\n",
 				__FILE__, __LINE__, __func__, val);
@@ -509,6 +518,7 @@ static int msgmii_phy_autonegotiate(void)
 	if (rv != 0) {
 		goto out;
 	}
+	printf(" -- data from 0x%x, 0x%x(PHY_BMSR) --> 0x%x\n", SF2_MSGMII_PHY_ADDR, PHY_BMSR, val);
 
 	if (val & PHY_BMSR_AUTN_COMP) {
 		/* no need to start auto-negotiation if it is already done */
@@ -519,6 +529,7 @@ static int msgmii_phy_autonegotiate(void)
 	if (rv != 0) {
 		goto out;
 	}
+	printf(" -- data from 0x%x, 0x%x(PHY_BMCR) --> 0x%x\n", SF2_MSGMII_PHY_ADDR, PHY_BMCR, val);
 
 	rv = miiphy_write(M2S_MII_NAME, SF2_MSGMII_PHY_ADDR, PHY_BMCR,
 			val | PHY_BMCR_AUTON | PHY_BMCR_RST_NEG);
@@ -539,21 +550,21 @@ static int msgmii_phy_autonegotiate(void)
 			goto out;
 		}
 		if (!(val & PHY_BMSR_AUTN_COMP)) {
-			if (timeout % 100 != 0) {
-				udelay(10000);
-				continue;
-			}
-
-			/* restart auto-negotiation if it is not complete
-			   in a second */
-			rv = miiphy_write(M2S_MII_NAME, SF2_MSGMII_PHY_ADDR,
-					PHY_BMCR,
-					PHY_BMCR_AUTON | PHY_BMCR_RST_NEG);
-			if (rv != 0) {
-				goto out;
-			}
-
-			continue;
+		  if (timeout % 100 != 0) {
+		    udelay(10000);
+		    continue;
+		  }
+		  
+		  /* restart auto-negotiation if it is not complete
+		     in a second */
+		  rv = miiphy_write(M2S_MII_NAME, SF2_MSGMII_PHY_ADDR,
+				    PHY_BMCR,
+				    PHY_BMCR_AUTON | PHY_BMCR_RST_NEG);
+		  if (rv != 0) {
+		    goto out;
+		  }
+		  
+		  continue;
 		}
 		break;
 	}
@@ -608,6 +619,11 @@ static int m2s_eth_init(struct eth_device *dev, bd_t *bd_unused)
 {
 	volatile struct m2s_eth_dma_bd	*bd;
 	int				i, rv = 0, timeout;
+
+
+	printf("serdes init\n");
+	*(volatile uint32_t*)(0x40028000 + 0x1c28) = 0x0;
+
 
 	/*
 	 * Release the Ethernet MAC from reset

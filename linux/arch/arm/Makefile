@@ -129,11 +129,11 @@ CHECKFLAGS	+= -D__arm__
 
 #Default value
 head-y		:= arch/arm/kernel/head$(MMUEXT).o arch/arm/kernel/init_task.o
-textofs-y	:= 0x00008000
-textofs-$(CONFIG_ARCH_CLPS711X) := 0x00028000
+textofs-y	:= 0x02008000
+textofs-$(CONFIG_ARCH_CLPS711X) := 0x02028000
 # SA1111 DMA bug: we don't want the kernel to live in precious DMA-able memory
 ifeq ($(CONFIG_ARCH_SA1100),y)
-textofs-$(CONFIG_SA1111) := 0x00208000
+textofs-$(CONFIG_SA1111) := 0x02208000
 endif
 
 # Machine directory name.  This list is sorted alphanumerically

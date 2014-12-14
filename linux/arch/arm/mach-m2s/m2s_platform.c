@@ -67,8 +67,8 @@ int m2s_device_get(void)
 	case PLATFORM_G4M_VB:
 	case PLATFORM_SF2_DEV_KIT:
 	default:
-		r = DEVICE_M2S_050;
-		break;
+	  r = DEVICE_M2S_050;
+	  break;
 	}
 	return r;
 }
@@ -79,16 +79,16 @@ EXPORT_SYMBOL(m2s_device_get);
  */
 static int __init m2s_platform_parse(char *s)
 {
-	if (!strcmp(s, "g4m-vb"))
-		m2s_platform = PLATFORM_G4M_VB;
-	else if (!strcmp(s, "m2s-som"))
-		m2s_platform = PLATFORM_M2S_SOM;
-	else if (!strcmp(s, "sf2-dev-kit"))
-		m2s_platform = PLATFORM_SF2_DEV_KIT;
-	else if (!strcmp(s, "m2s-fg484-som"))
-		m2s_platform = PLATFORM_M2S_FG484_SOM;
-
-	return 1;
+  if (!strcmp(s, "g4m-vb"))
+    m2s_platform = PLATFORM_G4M_VB;
+  else if (!strcmp(s, "m2s-som"))
+    m2s_platform = PLATFORM_M2S_SOM;
+  else if (!strcmp(s, "sf2-dev-kit"))
+    m2s_platform = PLATFORM_SF2_DEV_KIT;
+  else if (!strcmp(s, "m2s-fg484-som"))
+    m2s_platform = PLATFORM_M2S_FG484_SOM;
+  
+  return 1;
 }
 __setup("m2s_platform=", m2s_platform_parse);
 
@@ -103,27 +103,27 @@ static void __init m2s_init(void);
  * Data structure for the timer system.
  */
 static struct sys_timer m2s_timer = {
-	.init		= m2s_timer_init,
+  .init		= m2s_timer_init,
 };
 
 /*
  * M2S plaform machine description.
  */
 MACHINE_START(M2S, "Actel M2S")
-	/*
-	 * Physical address of the serial port used for the early
-	 * kernel debugging (CONFIG_DEBUG_LL=y).
-	 * This address is actually never used in the MMU-less kernel
-	 * (since no mapping is needed to access this port),
-	 * but let's keep these fields filled out for consistency.
-	 */
-	.phys_io	= MSS_UART1_BASE,
-	.io_pg_offst	= (IO_ADDRESS(MSS_UART1_BASE) >> 18) & 0xfffc,
-	.map_io		= m2s_map_io,
-	.init_irq	= m2s_init_irq,
-	.timer		= &m2s_timer,
-	.init_machine	= m2s_init,
-MACHINE_END
+/*
+ * Physical address of the serial port used for the early
+ * kernel debugging (CONFIG_DEBUG_LL=y).
+ * This address is actually never used in the MMU-less kernel
+ * (since no mapping is needed to access this port),
+ * but let's keep these fields filled out for consistency.
+ */
+  .phys_io	= MSS_UART1_BASE,
+  .io_pg_offst	= (IO_ADDRESS(MSS_UART1_BASE) >> 18) & 0xfffc,
+  .map_io		= m2s_map_io,
+  .init_irq	= m2s_init_irq,
+  .timer		= &m2s_timer,
+  .init_machine	= m2s_init,
+  MACHINE_END
 
 /*
  * Map required regions.

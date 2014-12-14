@@ -138,106 +138,106 @@ int  env_init(void)
 #ifdef CMD_SAVEENV
 int saveenv(void)
 {
-	char *saved_data = NULL;
-	int rc = 1;
-	char flag = OBSOLETE_FLAG, new_flag = ACTIVE_FLAG;
+  char *saved_data = NULL;
+  int rc = 1;
+  char flag = OBSOLETE_FLAG, new_flag = ACTIVE_FLAG;
 #if CONFIG_ENV_SECT_SIZE > CONFIG_ENV_SIZE
-	ulong up_data = 0;
+  ulong up_data = 0;
 #endif
+  
+  debug ("Protect off %08lX ... %08lX\n",
+	 (ulong)flash_addr, end_addr);
+  
+  if (flash_sect_protect (0, (ulong)flash_addr, end_addr)) {
+    goto Done;
+  }
 
-	debug ("Protect off %08lX ... %08lX\n",
-		(ulong)flash_addr, end_addr);
-
-	if (flash_sect_protect (0, (ulong)flash_addr, end_addr)) {
-		goto Done;
-	}
-
-	debug ("Protect off %08lX ... %08lX\n",
-		(ulong)flash_addr_new, end_addr_new);
-
-	if (flash_sect_protect (0, (ulong)flash_addr_new, end_addr_new)) {
-		goto Done;
-	}
-
+  debug ("Protect off %08lX ... %08lX\n",
+	 (ulong)flash_addr_new, end_addr_new);
+  
+  if (flash_sect_protect (0, (ulong)flash_addr_new, end_addr_new)) {
+    goto Done;
+  }
+  
 #if CONFIG_ENV_SECT_SIZE > CONFIG_ENV_SIZE
-	up_data = (end_addr_new + 1 - ((long)flash_addr_new + CONFIG_ENV_SIZE));
-	debug ("Data to save 0x%x\n", up_data);
-	if (up_data) {
-		if ((saved_data = malloc(up_data)) == NULL) {
-			printf("Unable to save the rest of sector (%ld)\n",
-				up_data);
-			goto Done;
-		}
-		memcpy(saved_data,
-			(void *)((long)flash_addr_new + CONFIG_ENV_SIZE), up_data);
-		debug ("Data (start 0x%x, len 0x%x) saved at 0x%x\n",
-			   (long)flash_addr_new + CONFIG_ENV_SIZE,
-				up_data, saved_data);
-	}
+  up_data = (end_addr_new + 1 - ((long)flash_addr_new + CONFIG_ENV_SIZE));
+  debug ("Data to save 0x%x\n", up_data);
+  if (up_data) {
+    if ((saved_data = malloc(up_data)) == NULL) {
+      printf("Unable to save the rest of sector (%ld)\n",
+	     up_data);
+      goto Done;
+    }
+    memcpy(saved_data,
+	   (void *)((long)flash_addr_new + CONFIG_ENV_SIZE), up_data);
+    debug ("Data (start 0x%x, len 0x%x) saved at 0x%x\n",
+	   (long)flash_addr_new + CONFIG_ENV_SIZE,
+	   up_data, saved_data);
+  }
 #endif
-	puts ("Erasing Flash...");
-	debug (" %08lX ... %08lX ...",
-		(ulong)flash_addr_new, end_addr_new);
-
-	if (flash_sect_erase ((ulong)flash_addr_new, end_addr_new)) {
-		goto Done;
-	}
-
-	puts ("Writing to Flash... ");
-	debug (" %08lX ... %08lX ...",
-		(ulong)&(flash_addr_new->data),
-		sizeof(env_ptr->data)+(ulong)&(flash_addr_new->data));
-	if ((rc = flash_write((char *)env_ptr->data,
+  puts ("Erasing Flash...");
+  debug (" %08lX ... %08lX ...",
+	 (ulong)flash_addr_new, end_addr_new);
+  
+  if (flash_sect_erase ((ulong)flash_addr_new, end_addr_new)) {
+    goto Done;
+  }
+  
+  puts ("Writing to Flash... ");
+  debug (" %08lX ... %08lX ...",
+	 (ulong)&(flash_addr_new->data),
+	 sizeof(env_ptr->data)+(ulong)&(flash_addr_new->data));
+  if ((rc = flash_write((char *)env_ptr->data,
 			(ulong)&(flash_addr_new->data),
 			sizeof(env_ptr->data))) ||
-	    (rc = flash_write((char *)&(env_ptr->crc),
+      (rc = flash_write((char *)&(env_ptr->crc),
 			(ulong)&(flash_addr_new->crc),
 			sizeof(env_ptr->crc))) ||
-	    (rc = flash_write(&flag,
+      (rc = flash_write(&flag,
 			(ulong)&(flash_addr->flags),
 			sizeof(flash_addr->flags))) ||
-	    (rc = flash_write(&new_flag,
+      (rc = flash_write(&new_flag,
 			(ulong)&(flash_addr_new->flags),
 			sizeof(flash_addr_new->flags))))
-	{
-		flash_perror (rc);
-		goto Done;
-	}
-	puts ("done\n");
-
+    {
+      flash_perror (rc);
+      goto Done;
+    }
+  puts ("done\n");
+  
 #if CONFIG_ENV_SECT_SIZE > CONFIG_ENV_SIZE
-	if (up_data) { /* restore the rest of sector */
-		debug ("Restoring the rest of data to 0x%x len 0x%x\n",
-			   (long)flash_addr_new + CONFIG_ENV_SIZE, up_data);
-		if (flash_write(saved_data,
-				(long)flash_addr_new + CONFIG_ENV_SIZE,
-				up_data)) {
-			flash_perror(rc);
-			goto Done;
-		}
-	}
+  if (up_data) { /* restore the rest of sector */
+    debug ("Restoring the rest of data to 0x%x len 0x%x\n",
+	   (long)flash_addr_new + CONFIG_ENV_SIZE, up_data);
+    if (flash_write(saved_data,
+		    (long)flash_addr_new + CONFIG_ENV_SIZE,
+		    up_data)) {
+      flash_perror(rc);
+      goto Done;
+    }
+  }
 #endif
-	{
-		env_t * etmp = flash_addr;
-		ulong ltmp = end_addr;
-
-		flash_addr = flash_addr_new;
-		flash_addr_new = etmp;
-
-		end_addr = end_addr_new;
-		end_addr_new = ltmp;
-	}
-
-	rc = 0;
-Done:
-
-	if (saved_data)
-		free (saved_data);
-	/* try to re-protect */
-	(void) flash_sect_protect (1, (ulong)flash_addr, end_addr);
-	(void) flash_sect_protect (1, (ulong)flash_addr_new, end_addr_new);
-
-	return rc;
+  {
+    env_t * etmp = flash_addr;
+    ulong ltmp = end_addr;
+    
+    flash_addr = flash_addr_new;
+    flash_addr_new = etmp;
+    
+    end_addr = end_addr_new;
+    end_addr_new = ltmp;
+  }
+  
+  rc = 0;
+ Done:
+  
+  if (saved_data)
+    free (saved_data);
+  /* try to re-protect */
+  (void) flash_sect_protect (1, (ulong)flash_addr, end_addr);
+  (void) flash_sect_protect (1, (ulong)flash_addr_new, end_addr_new);
+  
+  return rc;
 }
 #endif /* CMD_SAVEENV */
 

@@ -8,6 +8,11 @@ kernel/drivers/i2c/i2c-core.ko
 kernel/drivers/i2c/i2c-dev.ko
 kernel/drivers/i2c/busses/i2c-a2f.ko
 kernel/drivers/input/input-core.ko
+kernel/drivers/mtd/mtd.ko
+kernel/drivers/mtd/mtdconcat.ko
+kernel/drivers/mtd/mtdchar.ko
+kernel/drivers/mtd/chips/chipreg.ko
+kernel/drivers/mtd/devices/m25p80.ko
 kernel/drivers/net/mii.ko
 kernel/drivers/net/arm/m2s_eth.ko
 kernel/drivers/net/phy/libphy.ko

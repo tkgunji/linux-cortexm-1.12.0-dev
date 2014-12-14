@@ -47,6 +47,7 @@ ELF := $(strip $(ELF-y) $(ELF-$(ARCH)) $(ELF-$(BOARD)) $(ELF-$(CPU)))
 
 SREC = $(addsuffix .srec,$(ELF))
 BIN  = $(addsuffix .bin,$(ELF))
+MAP  = $(addsuffix .map,$(ELF))
 
 COBJS	:= $(ELF:=.o)
 
@@ -67,6 +68,7 @@ OBJS	:= $(addprefix $(obj),$(COBJS))
 ELF	:= $(addprefix $(obj),$(ELF))
 BIN	:= $(addprefix $(obj),$(BIN))
 SREC	:= $(addprefix $(obj),$(SREC))
+MAP	:= $(addprefix $(obj),$(MAP))
 
 gcclibdir := $(shell dirname `$(CC) -print-libgcc-file-name`)
 
@@ -83,7 +85,6 @@ $(obj)%:	$(obj)%.o $(LIB)
 		$(LD) -g -Ttext $(STANDALONE_LOAD_ADDR) \
 			-o $@ -e $(SYM_PREFIX)$(notdir $(<:.o=)) $< $(LIB) \
 			-L$(gcclibdir) -lgcc
-
 $(SREC):
 $(obj)%.srec:	$(obj)%
 		$(OBJCOPY) -O srec $< $@ 2>/dev/null

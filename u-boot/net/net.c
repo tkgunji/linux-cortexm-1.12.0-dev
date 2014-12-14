@@ -306,240 +306,240 @@ NetInitLoop(proto_t protocol)
 int
 NetLoop(proto_t protocol)
 {
-	bd_t *bd = gd->bd;
+  bd_t *bd = gd->bd;
 
 #ifdef CONFIG_NET_MULTI
-	NetRestarted = 0;
-	NetDevExists = 0;
+  NetRestarted = 0;
+  NetDevExists = 0;
 #endif
 
-	/* XXX problem with bss workaround */
-	NetArpWaitPacketMAC = NULL;
-	NetArpWaitTxPacket = NULL;
-	NetArpWaitPacketIP = 0;
-	NetArpWaitReplyIP = 0;
-	NetArpWaitTxPacket = NULL;
-	NetTxPacket = NULL;
-	NetTryCount = 1;
+  /* XXX problem with bss workaround */
+  NetArpWaitPacketMAC = NULL;
+  NetArpWaitTxPacket = NULL;
+  NetArpWaitPacketIP = 0;
+  NetArpWaitReplyIP = 0;
+  NetArpWaitTxPacket = NULL;
+  NetTxPacket = NULL;
+  NetTryCount = 1;
 
-	if (!NetTxPacket) {
-		int	i;
-		/*
-		 *	Setup packet buffers, aligned correctly.
-		 */
-		NetTxPacket = &PktBuf[0] + (PKTALIGN - 1);
-		NetTxPacket -= (ulong)NetTxPacket % PKTALIGN;
-		for (i = 0; i < PKTBUFSRX; i++) {
-			NetRxPackets[i] = NetTxPacket + (i+1)*PKTSIZE_ALIGN;
-		}
-	}
-
-	if (!NetArpWaitTxPacket) {
-		NetArpWaitTxPacket = &NetArpWaitPacketBuf[0] + (PKTALIGN - 1);
-		NetArpWaitTxPacket -= (ulong)NetArpWaitTxPacket % PKTALIGN;
-		NetArpWaitTxPacketSize = 0;
-	}
-
-	eth_halt();
+  if (!NetTxPacket) {
+    int	i;
+    /*
+     *	Setup packet buffers, aligned correctly.
+     */
+    NetTxPacket = &PktBuf[0] + (PKTALIGN - 1);
+    NetTxPacket -= (ulong)NetTxPacket % PKTALIGN;
+    for (i = 0; i < PKTBUFSRX; i++) {
+      NetRxPackets[i] = NetTxPacket + (i+1)*PKTSIZE_ALIGN;
+    }
+  }
+  
+  if (!NetArpWaitTxPacket) {
+    NetArpWaitTxPacket = &NetArpWaitPacketBuf[0] + (PKTALIGN - 1);
+    NetArpWaitTxPacket -= (ulong)NetArpWaitTxPacket % PKTALIGN;
+    NetArpWaitTxPacketSize = 0;
+  }
+  
+  eth_halt();
 #ifdef CONFIG_NET_MULTI
-	eth_set_current();
+  eth_set_current();
 #endif
-	if (eth_init(bd) < 0) {
-		eth_halt();
-		return(-1);
-	}
-
-restart:
+  if (eth_init(bd) < 0) {
+    eth_halt();
+    return(-1);
+  }
+  
+ restart:
 #ifdef CONFIG_NET_MULTI
-	memcpy (NetOurEther, eth_get_dev()->enetaddr, 6);
+  memcpy (NetOurEther, eth_get_dev()->enetaddr, 6);
 #else
-	eth_getenv_enetaddr("ethaddr", NetOurEther);
+  eth_getenv_enetaddr("ethaddr", NetOurEther);
 #endif
-
-	NetState = NETLOOP_CONTINUE;
-
-	/*
-	 *	Start the ball rolling with the given start function.  From
-	 *	here on, this code is a state machine driven by received
-	 *	packets and timer events.
-	 */
-	NetInitLoop(protocol);
-
-	switch (net_check_prereq (protocol)) {
-	case 1:
-		/* network not configured */
-		eth_halt();
-		return (-1);
-
+  
+  NetState = NETLOOP_CONTINUE;
+  
+  /*
+   *	Start the ball rolling with the given start function.  From
+   *	here on, this code is a state machine driven by received
+   *	packets and timer events.
+   */
+  NetInitLoop(protocol);
+  
+  switch (net_check_prereq (protocol)) {
+  case 1:
+    /* network not configured */
+    eth_halt();
+    return (-1);
+    
 #ifdef CONFIG_NET_MULTI
-	case 2:
-		/* network device not configured */
-		break;
+  case 2:
+    /* network device not configured */
+    break;
 #endif /* CONFIG_NET_MULTI */
-
-	case 0:
+    
+  case 0:
 #ifdef CONFIG_NET_MULTI
-		NetDevExists = 1;
+    NetDevExists = 1;
 #endif
-		switch (protocol) {
-		case TFTP:
-			/* always use ARP to get server ethernet address */
-			TftpStart();
-			break;
-
+    switch (protocol) {
+    case TFTP:
+      /* always use ARP to get server ethernet address */
+      TftpStart();
+      break;
+      
 #if defined(CONFIG_CMD_DHCP)
-		case DHCP:
-			BootpTry = 0;
-			NetOurIP = 0;
-			DhcpRequest();		/* Basically same as BOOTP */
-			break;
+    case DHCP:
+      BootpTry = 0;
+      NetOurIP = 0;
+      DhcpRequest();		/* Basically same as BOOTP */
+      break;
 #endif
-
-		case BOOTP:
-			BootpTry = 0;
-			NetOurIP = 0;
-			BootpRequest ();
-			break;
-
-		case RARP:
-			RarpTry = 0;
-			NetOurIP = 0;
-			RarpRequest ();
-			break;
+      
+    case BOOTP:
+      BootpTry = 0;
+      NetOurIP = 0;
+      BootpRequest ();
+      break;
+      
+    case RARP:
+      RarpTry = 0;
+      NetOurIP = 0;
+      RarpRequest ();
+      break;
 #if defined(CONFIG_CMD_PING)
-		case PING:
-			PingStart();
-			break;
+    case PING:
+      PingStart();
+      break;
 #endif
 #if defined(CONFIG_CMD_NFS)
-		case NFS:
-			NfsStart();
-			break;
+    case NFS:
+      NfsStart();
+      break;
 #endif
 #if defined(CONFIG_CMD_CDP)
-		case CDP:
-			CDPStart();
-			break;
+    case CDP:
+      CDPStart();
+      break;
 #endif
 #ifdef CONFIG_NETCONSOLE
-		case NETCONS:
-			NcStart();
-			break;
+    case NETCONS:
+      NcStart();
+      break;
 #endif
 #if defined(CONFIG_CMD_SNTP)
-		case SNTP:
-			SntpStart();
-			break;
+    case SNTP:
+      SntpStart();
+      break;
 #endif
 #if defined(CONFIG_CMD_DNS)
-		case DNS:
-			DnsStart();
-			break;
+    case DNS:
+      DnsStart();
+      break;
 #endif
-		default:
-			break;
-		}
+    default:
+      break;
+    }
 
-		NetBootFileXferSize = 0;
-		break;
-	}
-
+    NetBootFileXferSize = 0;
+    break;
+  }
+  
 #if defined(CONFIG_MII) || defined(CONFIG_CMD_MII)
 #if defined(CONFIG_SYS_FAULT_ECHO_LINK_DOWN) && defined(CONFIG_STATUS_LED) && defined(STATUS_LED_RED)
-	/*
-	 * Echo the inverted link state to the fault LED.
-	 */
-	if(miiphy_link(eth_get_dev()->name, CONFIG_SYS_FAULT_MII_ADDR)) {
-		status_led_set (STATUS_LED_RED, STATUS_LED_OFF);
-	} else {
-		status_led_set (STATUS_LED_RED, STATUS_LED_ON);
-	}
+  /*
+   * Echo the inverted link state to the fault LED.
+   */
+  if(miiphy_link(eth_get_dev()->name, CONFIG_SYS_FAULT_MII_ADDR)) {
+    status_led_set (STATUS_LED_RED, STATUS_LED_OFF);
+  } else {
+    status_led_set (STATUS_LED_RED, STATUS_LED_ON);
+  }
 #endif /* CONFIG_SYS_FAULT_ECHO_LINK_DOWN, ... */
 #endif /* CONFIG_MII, ... */
-
-	/*
-	 *	Main packet reception loop.  Loop receiving packets until
-	 *	someone sets `NetState' to a state that terminates.
-	 */
-	for (;;) {
-		WATCHDOG_RESET();
+  
+  /*
+   *	Main packet reception loop.  Loop receiving packets until
+   *	someone sets `NetState' to a state that terminates.
+   */
+  for (;;) {
+    WATCHDOG_RESET();
 #ifdef CONFIG_SHOW_ACTIVITY
-		{
-			extern void show_activity(int arg);
-			show_activity(1);
-		}
+    {
+      extern void show_activity(int arg);
+      show_activity(1);
+    }
 #endif
-		/*
-		 *	Check the ethernet for a new packet.  The ethernet
-		 *	receive routine will process it.
-		 */
-		eth_rx();
-
-		/*
-		 *	Abort if ctrl-c was pressed.
-		 */
-		if (ctrlc()) {
-			eth_halt();
-			puts ("\nAbort\n");
-			return (-1);
-		}
-
-		ArpTimeoutCheck();
-
-		/*
-		 *	Check for a timeout, and run the timeout handler
-		 *	if we have one.
-		 */
-		if (timeHandler && ((get_timer(0) - timeStart) > timeDelta)) {
-			thand_f *x;
-
+    /*
+     *	Check the ethernet for a new packet.  The ethernet
+     *	receive routine will process it.
+     */
+    eth_rx();
+    
+    /*
+     *	Abort if ctrl-c was pressed.
+     */
+    if (ctrlc()) {
+      eth_halt();
+      puts ("\nAbort\n");
+      return (-1);
+    }
+    
+    ArpTimeoutCheck();
+    
+    /*
+     *	Check for a timeout, and run the timeout handler
+     *	if we have one.
+     */
+    if (timeHandler && ((get_timer(0) - timeStart) > timeDelta)) {
+      thand_f *x;
+      
 #if defined(CONFIG_MII) || defined(CONFIG_CMD_MII)
-#  if defined(CONFIG_SYS_FAULT_ECHO_LINK_DOWN) && \
-      defined(CONFIG_STATUS_LED) &&	   \
-      defined(STATUS_LED_RED)
-			/*
-			 * Echo the inverted link state to the fault LED.
-			 */
-			if(miiphy_link(eth_get_dev()->name, CONFIG_SYS_FAULT_MII_ADDR)) {
-				status_led_set (STATUS_LED_RED, STATUS_LED_OFF);
-			} else {
-				status_led_set (STATUS_LED_RED, STATUS_LED_ON);
-			}
+#  if defined(CONFIG_SYS_FAULT_ECHO_LINK_DOWN) &&	\
+  defined(CONFIG_STATUS_LED) &&				\
+  defined(STATUS_LED_RED)
+      /*
+       * Echo the inverted link state to the fault LED.
+       */
+      if(miiphy_link(eth_get_dev()->name, CONFIG_SYS_FAULT_MII_ADDR)) {
+	status_led_set (STATUS_LED_RED, STATUS_LED_OFF);
+      } else {
+	status_led_set (STATUS_LED_RED, STATUS_LED_ON);
+      }
 #  endif /* CONFIG_SYS_FAULT_ECHO_LINK_DOWN, ... */
 #endif /* CONFIG_MII, ... */
-			x = timeHandler;
-			timeHandler = (thand_f *)0;
-			(*x)();
-		}
-
-
-		switch (NetState) {
-
-		case NETLOOP_RESTART:
+      x = timeHandler;
+      timeHandler = (thand_f *)0;
+      (*x)();
+    }
+    
+    
+    switch (NetState) {
+      
+    case NETLOOP_RESTART:
 #ifdef CONFIG_NET_MULTI
-			NetRestarted = 1;
+      NetRestarted = 1;
 #endif
-			goto restart;
-
-		case NETLOOP_SUCCESS:
-			if (NetBootFileXferSize > 0) {
-				char buf[20];
-				printf("Bytes transferred = %ld (%lx hex)\n",
-					NetBootFileXferSize,
-					NetBootFileXferSize);
-				sprintf(buf, "%lX", NetBootFileXferSize);
-				setenv("filesize", buf);
-
-				sprintf(buf, "%lX", (unsigned long)load_addr);
-				setenv("fileaddr", buf);
-			}
-			eth_halt();
-			return NetBootFileXferSize;
-
-		case NETLOOP_FAIL:
-			return (-1);
-		}
-	}
+      goto restart;
+      
+    case NETLOOP_SUCCESS:
+      if (NetBootFileXferSize > 0) {
+	char buf[20];
+	printf("Bytes transferred = %ld (%lx hex)\n",
+	       NetBootFileXferSize,
+	       NetBootFileXferSize);
+	sprintf(buf, "%lX", NetBootFileXferSize);
+	setenv("filesize", buf);
+	
+	sprintf(buf, "%lX", (unsigned long)load_addr);
+	setenv("fileaddr", buf);
+      }
+      eth_halt();
+      return NetBootFileXferSize;
+      
+    case NETLOOP_FAIL:
+      return (-1);
+    }
+  }
 }
 
 /**********************************************************************/

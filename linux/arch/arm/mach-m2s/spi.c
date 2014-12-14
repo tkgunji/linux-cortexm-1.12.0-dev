@@ -265,7 +265,11 @@ void __init m2s_spi_init(void)
 		 * On-module SPI Flash (resides at SPI0,CS0)
 		 */
 		{
+#if defined(CONFIG_SPI_SPIDEV)
+			.modalias = "spidev",
+#else
 			.modalias = "m25p32",
+#endif
 			.max_speed_hz = 166000000/4,
 			.bus_num = 0,
 			.chip_select = 0,
@@ -279,7 +283,11 @@ void __init m2s_spi_init(void)
 		 * On-dongle SPI Flash (resides at SPI1,CS0)
 		 */
 		{
+#if defined(CONFIG_SPI_SPIDEV)
+			.modalias = "spidev",
+#else
 			.modalias = "m25p32",
+#endif
 			.platform_data = &spi_flash_data__dongle1,
 			.max_speed_hz = 25000000,
 			.bus_num = 1,
@@ -290,7 +298,7 @@ void __init m2s_spi_init(void)
 
 #if defined(CONFIG_M2S_MSS_SPI1) && defined(CONFIG_MTD_M25P80)
 		/*
-		 * On-dongle SPI Flash (resides at SPI1,CS1)
+		 * On-dongle SPI Flash (resides at SPI1,CS3)
 		 */
 		{
 			/*
@@ -301,11 +309,11 @@ void __init m2s_spi_init(void)
 			.modalias = "spidev",
 #else
 			.modalias = "m25p32",
-			.platform_data = &spi_flash_data__dongle2,
 #endif
+			.platform_data = &spi_flash_data__dongle2,
 			.max_speed_hz = 25000000,
 			.bus_num = 1,
-			.chip_select = 1,
+			.chip_select = 3,
 			.mode = SPI_MODE_3,
 		},
 #endif

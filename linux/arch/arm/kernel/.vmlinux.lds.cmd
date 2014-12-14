@@ -1,4 +1,4 @@
-cmd_arch/arm/kernel/vmlinux.lds := arm-uclinuxeabi-gcc -E -Wp,-MD,arch/arm/kernel/.vmlinux.lds.d  -nostdinc -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -I/rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-m2s/include   -DTEXT_OFFSET=0x00008000 -P -C -Uarm -D__ASSEMBLY__ -DLINKER_SCRIPT -o arch/arm/kernel/vmlinux.lds arch/arm/kernel/vmlinux.lds.S
+cmd_arch/arm/kernel/vmlinux.lds := arm-uclinuxeabi-gcc -E -Wp,-MD,arch/arm/kernel/.vmlinux.lds.d  -nostdinc -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -I/rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-m2s/include   -DTEXT_OFFSET=0x02008000 -P -C -Uarm -D__ASSEMBLY__ -DLINKER_SCRIPT -o arch/arm/kernel/vmlinux.lds arch/arm/kernel/vmlinux.lds.S
 
 deps_arch/arm/kernel/vmlinux.lds := \
   arch/arm/kernel/vmlinux.lds.S \
@@ -27,17 +27,17 @@ deps_arch/arm/kernel/vmlinux.lds := \
     $(wildcard include/config/generic/bug.h) \
     $(wildcard include/config/pm/trace.h) \
     $(wildcard include/config/blk/dev/initrd.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/thread_info.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/thread_info.h \
     $(wildcard include/config/arm/thumbee.h) \
   include/linux/compiler.h \
     $(wildcard include/config/enable/must/check.h) \
     $(wildcard include/config/enable/warn/deprecated.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/fpstate.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/fpstate.h \
     $(wildcard include/config/vfpv3.h) \
     $(wildcard include/config/smp.h) \
     $(wildcard include/config/vfpm.h) \
     $(wildcard include/config/iwmmxt.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/memory.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/memory.h \
     $(wildcard include/config/page/offset.h) \
     $(wildcard include/config/thumb2/kernel.h) \
     $(wildcard include/config/highmem.h) \
@@ -47,12 +47,12 @@ deps_arch/arm/kernel/vmlinux.lds := \
     $(wildcard include/config/discontigmem.h) \
   include/linux/const.h \
   arch/arm/mach-m2s/include/mach/memory.h \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/sizes.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/sizes.h \
   include/asm-generic/memory_model.h \
     $(wildcard include/config/flatmem.h) \
     $(wildcard include/config/sparsemem/vmemmap.h) \
     $(wildcard include/config/sparsemem.h) \
-  /rcu2/firmware/linux-cortexm-1.12.0/linux/arch/arm/include/asm/page.h \
+  /rcu2/linux-cortexm-1.12.0-dev/linux/arch/arm/include/asm/page.h \
     $(wildcard include/config/cpu/copy/v3.h) \
     $(wildcard include/config/cpu/copy/v4wt.h) \
     $(wildcard include/config/cpu/copy/v4wb.h) \

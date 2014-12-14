@@ -190,42 +190,50 @@ netboot_common (proto_t proto, cmd_tbl_t *cmdtp, int argc, char *argv[])
 		show_boot_progress (-80);
 		return 1;
 	}
-
+	
 	show_boot_progress (80);
 	if ((size = NetLoop(proto)) < 0) {
-		show_boot_progress (-81);
-		return 1;
+	  show_boot_progress (-81);
+	  return 1;
 	}
 
+
+	printf("NetLoop is OK!!");
+	if (NetOurIP) {
+	  char tmp[22];
+	  ip_to_string (NetOurIP, tmp);
+	  printf("  IP address = %s\n", tmp);
+	}
+	
 	show_boot_progress (81);
 	/* NetLoop ok, update environment */
 	netboot_update_env();
 
 	/* done if no file was loaded (no errors though) */
 	if (size == 0) {
-		show_boot_progress (-82);
-		return 0;
+	  show_boot_progress (-82);
+	  return 0;
 	}
-
+	
 	/* flush cache */
 	flush_cache(load_addr, size);
-
+	
 	/* Loading ok, check if we should attempt an auto-start */
 	if (((s = getenv("autostart")) != NULL) && (strcmp(s,"yes") == 0)) {
-		char *local_args[2];
-		local_args[0] = argv[0];
-		local_args[1] = NULL;
-
-		printf ("Automatic boot of image at addr 0x%08lX ...\n",
-			load_addr);
-		show_boot_progress (82);
+	  char *local_args[2];
+	  local_args[0] = argv[0];
+	  local_args[1] = NULL;
+	  
+	  printf ("Automatic boot of image at addr 0x%08lX ...\n",
+		  load_addr);
+	  show_boot_progress (82);
 		rcode = do_bootm (cmdtp, 0, 1, local_args);
 	}
-
+	
 	if (rcode < 0)
-		show_boot_progress (-83);
+	  show_boot_progress (-83);
 	else
-		show_boot_progress (84);
+	  show_boot_progress (84);
 	return rcode;
 }
 

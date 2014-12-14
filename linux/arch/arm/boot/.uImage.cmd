@@ -1,1 +1,1 @@
-cmd_arch/arm/boot/uImage := /bin/sh /rcu2/firmware/linux-cortexm-1.12.0/linux/scripts/mkuboot.sh -A arm -O linux -T kernel -C none -a 0xA0008000 -e 0xA0008001 -n 'Linux-2.6.33-arm1' -d arch/arm/boot/Image arch/arm/boot/uImage
+cmd_arch/arm/boot/uImage := /bin/sh /rcu2/linux-cortexm-1.12.0-dev/linux/scripts/mkuboot.sh -A arm -O linux -T kernel -C none -a 0xA2008000 -e 0xA2008001 -n 'Linux-2.6.33-arm1' -d arch/arm/boot/Image arch/arm/boot/uImage

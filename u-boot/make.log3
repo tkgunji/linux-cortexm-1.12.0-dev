@@ -1,0 +1,461 @@
+Generating include/autoconf.mk
+Generating include/autoconf.mk.dep
+for dir in tools examples/standalone examples/api cpu/arm_cortexm3 /rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3/ ; do \
+			make -C $dir _depend ; done
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/tools' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/tools' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/tools' に入ります
+make[1]: `_depend' に対して行うべき事はありません.
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/tools' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/examples/standalone' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/examples/standalone' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/examples/standalone' に入ります
+make[1]: `_depend' に対して行うべき事はありません.
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/examples/standalone' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/examples/api' に入ります
+make[1]: `_depend' に対して行うべき事はありません.
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/examples/api' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3' に入ります
+make[1]: `_depend' に対して行うべき事はありません.
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3' に入ります
+make[1]: `_depend' に対して行うべき事はありません.
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3' から出ます
+make -C tools all
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/tools' に入ります
+gcc -g -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -pedantic -c -o crc32.o /rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_generic/crc32.c
+gcc -g -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -c -o env_embedded.o /rcu2/linux-cortexm-1.12.0-dev/u-boot/common/env_embedded.c
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -pedantic   -o envcrc.o envcrc.c -c
+gcc -g -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -pedantic -c -o sha1.o /rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_generic/sha1.c
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -pedantic  -o envcrc crc32.o env_embedded.o envcrc.o sha1.o
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -pedantic   -o gen_eth_addr.o gen_eth_addr.c -c
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -pedantic  -o gen_eth_addr gen_eth_addr.o
+strip gen_eth_addr
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -pedantic   -o img2srec.o img2srec.c -c
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -pedantic  -o img2srec img2srec.o
+strip img2srec
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES   -o default_image.o default_image.c -c
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES   -o fit_image.o fit_image.c -c
+gcc -g -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -c -o image.o /rcu2/linux-cortexm-1.12.0-dev/u-boot/common/image.c
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES   -o imximage.o imximage.c -c
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES   -o kwbimage.o kwbimage.c -c
+gcc -g -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -pedantic -c -o md5.o /rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_generic/md5.c
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES   -o mkimage.o mkimage.c -c
+mkimage.c: In function ‘main’:
+mkimage.c:205: 警告: dereferencing type-punned pointer will break strict-aliasing rules
+mkimage.c:223: 警告: dereferencing type-punned pointer will break strict-aliasing rules
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES   -o os_support.o os_support.c -c
+gcc -g -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -c -o fdt.o /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt/fdt.c
+gcc -g -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -c -o fdt_ro.o /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt/fdt_ro.c
+gcc -g -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -c -o fdt_rw.o /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt/fdt_rw.c
+gcc -g -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -c -o fdt_strerror.o /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt/fdt_strerror.c
+gcc -g -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -c -o fdt_wip.o /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt/fdt_wip.c
+gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include2 -idirafter /rcu2/linux-cortexm-1.12.0-dev/u-boot/include -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt -I /rcu2/linux-cortexm-1.12.0-dev/u-boot/tools -DTEXT_BASE= -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -pedantic  -o mkimage crc32.o default_image.o fit_image.o image.o imximage.o kwbimage.o md5.o mkimage.o os_support.o sha1.o fdt.o fdt_ro.o fdt_rw.o fdt_strerror.o fdt_wip.o
+strip mkimage
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/tools' から出ます
+make -C examples/standalone all
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/examples/standalone' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o hello_world.o hello_world.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o stubs.o stubs.c -c
+arm-uclinuxeabi-ar crv libstubs.a stubs.o
+a - stubs.o
+arm-uclinuxeabi-ld -g -Ttext 0xA0007FC0 \
+			-o hello_world -e hello_world hello_world.o libstubs.a \
+			-L/rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1 -lgcc
+arm-uclinuxeabi-objcopy -O srec hello_world hello_world.srec 2>/dev/null
+arm-uclinuxeabi-objcopy -O binary hello_world hello_world.bin 2>/dev/null
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/examples/standalone' から出ます
+make -C examples/api all
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/examples/api' に入ります
+make[1]: `all' に対して行うべき事はありません.
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/examples/api' から出ます
+make -C cpu/arm_cortexm3 start.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o start.o start.c -c
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3' から出ます
+make -C lib_generic/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_generic' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_generic' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_generic' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o crc16.o crc16.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o crc32.o crc32.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o ctype.o ctype.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o display_options.o display_options.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o div64.o div64.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o gunzip.o gunzip.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o ldiv.o ldiv.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o net_utils.o net_utils.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o string.o string.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o strmhz.o strmhz.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o time.o time.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o vsprintf.o vsprintf.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o zlib.o zlib.c -c
+arm-uclinuxeabi-ar crv libgeneric.a crc16.o crc32.o ctype.o display_options.o div64.o gunzip.o ldiv.o net_utils.o string.o strmhz.o time.o vsprintf.o zlib.o
+a - crc16.o
+a - crc32.o
+a - ctype.o
+a - display_options.o
+a - div64.o
+a - gunzip.o
+a - ldiv.o
+a - net_utils.o
+a - string.o
+a - strmhz.o
+a - time.o
+a - vsprintf.o
+a - zlib.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_generic' から出ます
+make -C lib_generic/lzma/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_generic/lzma' に入ります
+arm-uclinuxeabi-ar crv liblzma.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_generic/lzma' から出ます
+make -C lib_generic/lzo/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_generic/lzo' に入ります
+arm-uclinuxeabi-ar crv liblzo.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_generic/lzo' から出ます
+make -C cpu/arm_cortexm3/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cpu.o cpu.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_cptf.o cmd_cptf.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o timer.o timer.c -c
+arm-uclinuxeabi-ar crv libarm_cortexm3.a cpu.o cmd_cptf.o timer.o
+a - cpu.o
+a - cmd_cptf.o
+a - timer.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3' から出ます
+make -C cpu/arm_cortexm3/m2s/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3/m2s' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3/m2s' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3/m2s' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o clock.o clock.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cpu.o cpu.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o envm.o envm.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o wdt.o wdt.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o soc.o soc.c -c
+arm-uclinuxeabi-ar crv libm2s.a clock.o cpu.o envm.o wdt.o soc.o
+a - clock.o
+a - cpu.o
+a - envm.o
+a - wdt.o
+a - soc.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3/m2s' から出ます
+make -C lib_arm/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_arm' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_arm' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_arm' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o board.o board.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o bootm.o bootm.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cache.o cache.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cache-cp15.o cache-cp15.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o interrupts.o interrupts.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o reset.o reset.c -c
+arm-uclinuxeabi-ar crv libarm.a board.o bootm.o cache.o cache-cp15.o interrupts.o reset.o
+a - board.o
+a - bootm.o
+a - cache.o
+a - cache-cp15.o
+a - interrupts.o
+a - reset.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/lib_arm' から出ます
+make -C fs/cramfs/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/cramfs' に入ります
+arm-uclinuxeabi-ar crv libcramfs.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/cramfs' から出ます
+make -C fs/fat/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/fat' に入ります
+arm-uclinuxeabi-ar crv libfat.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/fat' から出ます
+make -C fs/fdos/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/fdos' に入ります
+arm-uclinuxeabi-ar crv libfdos.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/fdos' から出ます
+make -C fs/jffs2/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/jffs2' に入ります
+arm-uclinuxeabi-ar crv libjffs2.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/jffs2' から出ます
+make -C fs/reiserfs/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/reiserfs' に入ります
+arm-uclinuxeabi-ar crv libreiserfs.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/reiserfs' から出ます
+make -C fs/ext2/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/ext2' に入ります
+arm-uclinuxeabi-ar crv libext2fs.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/ext2' から出ます
+make -C fs/yaffs2/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/yaffs2' に入ります
+arm-uclinuxeabi-ar crv libyaffs2.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/yaffs2' から出ます
+make -C fs/ubifs/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/ubifs' に入ります
+arm-uclinuxeabi-ar crv libubifs.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/fs/ubifs' から出ます
+make -C net/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/net' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/net' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/net' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o bootp.o bootp.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o eth.o eth.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o net.o net.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o rarp.o rarp.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o tftp.o tftp.c -c
+arm-uclinuxeabi-ar crv libnet.a bootp.o eth.o net.o rarp.o tftp.o
+a - bootp.o
+a - eth.o
+a - net.o
+a - rarp.o
+a - tftp.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/net' から出ます
+make -C disk/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/disk' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/disk' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/disk' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o part.o part.c -c
+arm-uclinuxeabi-ar crv libdisk.a part.o
+a - part.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/disk' から出ます
+make -C drivers/bios_emulator/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/bios_emulator' に入ります
+arm-uclinuxeabi-ar crv libatibiosemu.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/bios_emulator' から出ます
+make -C drivers/block/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/block' に入ります
+arm-uclinuxeabi-ar crv libblock.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/block' から出ます
+make -C drivers/dma/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/dma' に入ります
+arm-uclinuxeabi-ar crv libdma.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/dma' から出ます
+make -C drivers/fpga/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/fpga' に入ります
+arm-uclinuxeabi-ar crv libfpga.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/fpga' から出ます
+make -C drivers/gpio/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/gpio' に入ります
+arm-uclinuxeabi-ar crv libgpio.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/gpio' から出ます
+make -C drivers/hwmon/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/hwmon' に入ります
+arm-uclinuxeabi-ar crv libhwmon.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/hwmon' から出ます
+make -C drivers/i2c/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/i2c' に入ります
+arm-uclinuxeabi-ar crv libi2c.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/i2c' から出ます
+make -C drivers/input/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/input' に入ります
+arm-uclinuxeabi-ar crv libinput.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/input' から出ます
+make -C drivers/misc/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/misc' に入ります
+arm-uclinuxeabi-ar crv libmisc.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/misc' から出ます
+make -C drivers/mmc/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mmc' に入ります
+arm-uclinuxeabi-ar crv libmmc.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mmc' から出ます
+make -C drivers/mtd/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mtd' に入ります
+arm-uclinuxeabi-ar crv libmtd.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mtd' から出ます
+make -C drivers/mtd/nand/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mtd/nand' に入ります
+arm-uclinuxeabi-ar crv libnand.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mtd/nand' から出ます
+make -C drivers/mtd/onenand/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mtd/onenand' に入ります
+arm-uclinuxeabi-ar crv libonenand.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mtd/onenand' から出ます
+make -C drivers/mtd/ubi/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mtd/ubi' に入ります
+arm-uclinuxeabi-ar crv libubi.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mtd/ubi' から出ます
+make -C drivers/mtd/spi/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mtd/spi' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mtd/spi' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mtd/spi' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o spi_flash.o spi_flash.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o spansion.o spansion.c -c
+arm-uclinuxeabi-ar crv libspi_flash.a spi_flash.o spansion.o
+a - spi_flash.o
+a - spansion.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/mtd/spi' から出ます
+make -C drivers/net/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/net' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/net' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/net' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o m2s_eth.o m2s_eth.c -c
+arm-uclinuxeabi-ar crv libnet.a m2s_eth.o
+a - m2s_eth.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/net' から出ます
+make -C drivers/net/phy/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/net/phy' に入ります
+arm-uclinuxeabi-ar crv libphy.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/net/phy' から出ます
+make -C drivers/pci/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/pci' に入ります
+arm-uclinuxeabi-ar crv libpci.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/pci' から出ます
+make -C drivers/pcmcia/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/pcmcia' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/pcmcia' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/pcmcia' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o rpx_pcmcia.o rpx_pcmcia.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o tqm8xx_pcmcia.o tqm8xx_pcmcia.c -c
+arm-uclinuxeabi-ar crv libpcmcia.a rpx_pcmcia.o tqm8xx_pcmcia.o
+a - rpx_pcmcia.o
+a - tqm8xx_pcmcia.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/pcmcia' から出ます
+make -C drivers/power/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/power' に入ります
+arm-uclinuxeabi-ar crv libpower.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/power' から出ます
+make -C drivers/spi/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/spi' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/spi' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/spi' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o m2s_spi.o m2s_spi.c -c
+arm-uclinuxeabi-ar crv libspi.a m2s_spi.o
+a - m2s_spi.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/spi' から出ます
+make -C drivers/rtc/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/rtc' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/rtc' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/rtc' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o date.o date.c -c
+arm-uclinuxeabi-ar crv librtc.a date.o
+a - date.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/rtc' から出ます
+make -C drivers/serial/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/serial' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/serial' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/serial' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o ns16550.o ns16550.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o serial.o serial.c -c
+arm-uclinuxeabi-ar crv libserial.a ns16550.o serial.o
+a - ns16550.o
+a - serial.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/serial' から出ます
+make -C drivers/twserial/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/twserial' に入ります
+arm-uclinuxeabi-ar crv libtws.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/twserial' から出ます
+make -C drivers/usb/gadget/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/usb/gadget' に入ります
+arm-uclinuxeabi-ar crv libusb_gadget.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/usb/gadget' から出ます
+make -C drivers/usb/host/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/usb/host' に入ります
+arm-uclinuxeabi-ar crv libusb_host.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/usb/host' から出ます
+make -C drivers/usb/musb/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/usb/musb' に入ります
+arm-uclinuxeabi-ar crv libusb_musb.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/usb/musb' から出ます
+make -C drivers/usb/phy/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/usb/phy' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/usb/phy' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/usb/phy' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o twl4030.o twl4030.c -c
+arm-uclinuxeabi-ar crv libusb_phy.a twl4030.o
+a - twl4030.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/usb/phy' から出ます
+make -C drivers/video/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/video' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/video' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/video' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o videomodes.o videomodes.c -c
+arm-uclinuxeabi-ar crv libvideo.a videomodes.o
+a - videomodes.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/video' から出ます
+make -C drivers/watchdog/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/watchdog' に入ります
+arm-uclinuxeabi-ar crv libwatchdog.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/drivers/watchdog' から出ます
+make -C common/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/common' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/common' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/common' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_bdinfo.o cmd_bdinfo.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_boot.o cmd_boot.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_bootm.o cmd_bootm.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_help.o cmd_help.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_load.o cmd_load.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_mem.o cmd_mem.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_net.o cmd_net.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_nvedit.o cmd_nvedit.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_pcmcia.o cmd_pcmcia.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_sf.o cmd_sf.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_version.o cmd_version.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o command.o command.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o console.o console.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o dlmalloc.o dlmalloc.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o env_common.o env_common.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o env_sf.o env_sf.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o exports.o exports.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o flash.o flash.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o image.o image.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o main.o main.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o memsize.o memsize.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o miiphyutil.o miiphyutil.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o s_record.o s_record.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o stdio.o stdio.c -c
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o xyzModem.o xyzModem.c -c
+arm-uclinuxeabi-ar crv libcommon.a cmd_bdinfo.o cmd_boot.o cmd_bootm.o cmd_help.o cmd_load.o cmd_mem.o cmd_net.o cmd_nvedit.o cmd_pcmcia.o cmd_sf.o cmd_version.o command.o console.o dlmalloc.o env_common.o env_sf.o exports.o flash.o image.o main.o memsize.o miiphyutil.o s_record.o stdio.o xyzModem.o
+a - cmd_bdinfo.o
+a - cmd_boot.o
+a - cmd_bootm.o
+a - cmd_help.o
+a - cmd_load.o
+a - cmd_mem.o
+a - cmd_net.o
+a - cmd_nvedit.o
+a - cmd_pcmcia.o
+a - cmd_sf.o
+a - cmd_version.o
+a - command.o
+a - console.o
+a - dlmalloc.o
+a - env_common.o
+a - env_sf.o
+a - exports.o
+a - flash.o
+a - image.o
+a - main.o
+a - memsize.o
+a - miiphyutil.o
+a - s_record.o
+a - stdio.o
+a - xyzModem.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/common' から出ます
+make -C libfdt/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt' に入ります
+arm-uclinuxeabi-ar crv libfdt.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/libfdt' から出ます
+make -C api/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/api' に入ります
+arm-uclinuxeabi-ar crv libapi.a 
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/api' から出ます
+make -C post/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/post' に入ります
+(echo create libpost.a; for lib in   ; \
+	 do echo addlib $lib; done; echo save) \
+	| arm-uclinuxeabi-ar -M
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/post' から出ます
+make -C board/emcraft/m2s-som/
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/board/emcraft/m2s-som' に入ります
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/board/emcraft/m2s-som' から出ます
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/board/emcraft/m2s-som' に入ります
+arm-uclinuxeabi-gcc  -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -Wall -Wstrict-prototypes -fno-stack-protector   -o board.o board.c -c
+arm-uclinuxeabi-ar crv libm2s-som.a board.o
+a - board.o
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/board/emcraft/m2s-som' から出ます
+make -C /rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3/ u-boot.lds
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3' に入ります
+make[1]: `u-boot.lds' に対して行うべき事はありません.
+make[1]: ディレクトリ `/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3' から出ます
+arm-uclinuxeabi-gcc -E -g  -Os   -g2 -mthumb -mcpu=cortex-m3 -fsigned-char -O2 -fno-builtin-puts -fno-common -ffixed-r8 -D__KERNEL__ -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/include -fno-builtin -ffreestanding -isystem /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -DCONFIG_MEM_NVM_BASE="0x00000000" -DCONFIG_MEM_NVM_LEN="(256 * 1024)" -DCONFIG_MEM_NVM_UBOOT_OFF="0x0" -DCONFIG_MEM_RAM_BASE="0x20000000" -DCONFIG_MEM_RAM_LEN="(16 * 1024)" -DCONFIG_MEM_RAM_BUF_LEN="(32 * 1024)" -DCONFIG_MEM_MALLOC_LEN="(12 * 1024)" -DCONFIG_MEM_STACK_LEN="(4 * 1024)" -I/rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3 -include /rcu2/linux-cortexm-1.12.0-dev/u-boot/include/u-boot/u-boot.lds.h  -ansi -D__ASSEMBLY__ -P - </rcu2/linux-cortexm-1.12.0-dev/u-boot/cpu/arm_cortexm3/u-boot.lds >u-boot.lds
+UNDEF_SYM=`arm-uclinuxeabi-objdump -x board/emcraft/m2s-som/libm2s-som.a lib_generic/libgeneric.a lib_generic/lzma/liblzma.a lib_generic/lzo/liblzo.a cpu/arm_cortexm3/libarm_cortexm3.a cpu/arm_cortexm3/m2s/libm2s.a lib_arm/libarm.a fs/cramfs/libcramfs.a fs/fat/libfat.a fs/fdos/libfdos.a fs/jffs2/libjffs2.a fs/reiserfs/libreiserfs.a fs/ext2/libext2fs.a fs/yaffs2/libyaffs2.a fs/ubifs/libubifs.a net/libnet.a disk/libdisk.a drivers/bios_emulator/libatibiosemu.a drivers/block/libblock.a drivers/dma/libdma.a drivers/fpga/libfpga.a drivers/gpio/libgpio.a drivers/hwmon/libhwmon.a drivers/i2c/libi2c.a drivers/input/libinput.a drivers/misc/libmisc.a drivers/mmc/libmmc.a drivers/mtd/libmtd.a drivers/mtd/nand/libnand.a drivers/mtd/onenand/libonenand.a drivers/mtd/ubi/libubi.a drivers/mtd/spi/libspi_flash.a drivers/net/libnet.a drivers/net/phy/libphy.a drivers/pci/libpci.a drivers/pcmcia/libpcmcia.a drivers/power/libpower.a drivers/spi/libspi.a drivers/rtc/librtc.a drivers/serial/libserial.a drivers/twserial/libtws.a drivers/usb/gadget/libusb_gadget.a drivers/usb/host/libusb_host.a drivers/usb/musb/libusb_musb.a drivers/usb/phy/libusb_phy.a drivers/video/libvideo.a drivers/watchdog/libwatchdog.a common/libcommon.a libfdt/libfdt.a api/libapi.a post/libpost.a | sed  -n -e 's/.*\(__u_boot_cmd_.*\)/-u\1/p'|sort|uniq`; cd /rcu2/linux-cortexm-1.12.0-dev/u-boot && arm-uclinuxeabi-ld -Bstatic -T u-boot.lds  $UNDEF_SYM cpu/arm_cortexm3/start.o --start-group lib_generic/libgeneric.a lib_generic/lzma/liblzma.a lib_generic/lzo/liblzo.a cpu/arm_cortexm3/libarm_cortexm3.a cpu/arm_cortexm3/m2s/libm2s.a lib_arm/libarm.a fs/cramfs/libcramfs.a fs/fat/libfat.a fs/fdos/libfdos.a fs/jffs2/libjffs2.a fs/reiserfs/libreiserfs.a fs/ext2/libext2fs.a fs/yaffs2/libyaffs2.a fs/ubifs/libubifs.a net/libnet.a disk/libdisk.a drivers/bios_emulator/libatibiosemu.a drivers/block/libblock.a drivers/dma/libdma.a drivers/fpga/libfpga.a drivers/gpio/libgpio.a drivers/hwmon/libhwmon.a drivers/i2c/libi2c.a drivers/input/libinput.a drivers/misc/libmisc.a drivers/mmc/libmmc.a drivers/mtd/libmtd.a drivers/mtd/nand/libnand.a drivers/mtd/onenand/libonenand.a drivers/mtd/ubi/libubi.a drivers/mtd/spi/libspi_flash.a drivers/net/libnet.a drivers/net/phy/libphy.a drivers/pci/libpci.a drivers/pcmcia/libpcmcia.a drivers/power/libpower.a drivers/spi/libspi.a drivers/rtc/librtc.a drivers/serial/libserial.a drivers/twserial/libtws.a drivers/usb/gadget/libusb_gadget.a drivers/usb/host/libusb_host.a drivers/usb/musb/libusb_musb.a drivers/usb/phy/libusb_phy.a drivers/video/libvideo.a drivers/watchdog/libwatchdog.a common/libcommon.a libfdt/libfdt.a api/libapi.a post/libpost.a board/emcraft/m2s-som/libm2s-som.a --end-group -L /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/thumb2 -lgcc -Map u-boot.map -o u-boot
+arm-uclinuxeabi-objcopy -O srec u-boot u-boot.srec
+arm-uclinuxeabi-objcopy --gap-fill=0xff -O binary u-boot u-boot.bin

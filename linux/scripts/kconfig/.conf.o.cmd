@@ -9,8 +9,8 @@ deps_scripts/kconfig/conf.o := \
   /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h \
-  /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i386-redhat-linux/4.1.2/include/stddef.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stddef.h \
   /usr/include/bits/locale.h \
   /usr/include/ctype.h \
   /usr/include/bits/types.h \
@@ -23,7 +23,7 @@ deps_scripts/kconfig/conf.o := \
   /usr/include/wchar.h \
   /usr/include/bits/wchar.h \
   /usr/include/gconv.h \
-  /usr/lib/gcc/i386-redhat-linux/4.1.2/include/stdarg.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stdarg.h \
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h \
@@ -50,7 +50,7 @@ deps_scripts/kconfig/conf.o := \
   scripts/kconfig/lkc.h \
     $(wildcard include/config/list.h) \
   scripts/kconfig/expr.h \
-  /usr/lib/gcc/i386-redhat-linux/4.1.2/include/stdbool.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stdbool.h \
   /usr/include/libintl.h \
   scripts/kconfig/lkc_proto.h \
 

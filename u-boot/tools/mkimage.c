@@ -89,15 +89,15 @@ void mkimage_register (struct image_type_params *tparams)
  */
 struct image_type_params *mkimage_get_type(int type)
 {
-	struct image_type_params *curr;
-
-	for (curr = mkimage_tparams; curr != NULL; curr = curr->next) {
-		if (curr->check_image_type) {
-			if (!curr->check_image_type (type))
-				return curr;
-		}
-	}
-	return NULL;
+  struct image_type_params *curr;
+  
+  for (curr = mkimage_tparams; curr != NULL; curr = curr->next) {
+    if (curr->check_image_type) {
+      if (!curr->check_image_type (type))
+	return curr;
+    }
+  }
+  return NULL;
 }
 
 /*

@@ -160,106 +160,106 @@ int eth_get_dev_index (void)
 
 int eth_register(struct eth_device* dev)
 {
-	struct eth_device *d;
+  struct eth_device *d;
 
-	if (!eth_devices) {
-		eth_current = eth_devices = dev;
+  if (!eth_devices) {
+    eth_current = eth_devices = dev;
 #ifdef CONFIG_NET_MULTI
-		/* update current ethernet name */
-		{
-			char *act = getenv("ethact");
-			if (act == NULL || strcmp(act, eth_current->name) != 0)
-				setenv("ethact", eth_current->name);
-		}
+    /* update current ethernet name */
+    {
+      char *act = getenv("ethact");
+      if (act == NULL || strcmp(act, eth_current->name) != 0)
+	setenv("ethact", eth_current->name);
+    }
 #endif
-	} else {
-		for (d=eth_devices; d->next!=eth_devices; d=d->next);
-		d->next = dev;
-	}
-
-	dev->state = ETH_STATE_INIT;
-	dev->next  = eth_devices;
-
-	return 0;
+  } else {
+    for (d=eth_devices; d->next!=eth_devices; d=d->next);
+    d->next = dev;
+  }
+  
+  dev->state = ETH_STATE_INIT;
+  dev->next  = eth_devices;
+  
+  return 0;
 }
 
 int eth_initialize(bd_t *bis)
 {
-	unsigned char env_enetaddr[6];
-	int eth_number = 0;
+  unsigned char env_enetaddr[6];
+  int eth_number = 0;
+  
+  eth_devices = NULL;
+  eth_current = NULL;
 
-	eth_devices = NULL;
-	eth_current = NULL;
-
-	show_boot_progress (64);
+  show_boot_progress (64);
 #if defined(CONFIG_MII) || defined(CONFIG_CMD_MII)
-	miiphy_init();
+  miiphy_init();
 #endif
-	/* Try board-specific initialization first.  If it fails or isn't
-	 * present, try the cpu-specific initialization */
-	if (board_eth_init(bis) < 0)
-		cpu_eth_init(bis);
-
+  /* Try board-specific initialization first.  If it fails or isn't
+   * present, try the cpu-specific initialization */
+  if (board_eth_init(bis) < 0)
+    cpu_eth_init(bis);
+  
 #if defined(CONFIG_DB64360) || defined(CONFIG_CPCI750)
-	mv6436x_eth_initialize(bis);
+  mv6436x_eth_initialize(bis);
 #endif
 #if defined(CONFIG_DB64460) || defined(CONFIG_P3Mx)
-	mv6446x_eth_initialize(bis);
+  mv6446x_eth_initialize(bis);
 #endif
-	if (!eth_devices) {
-		puts ("No ethernet found.\n");
-		show_boot_progress (-64);
-	} else {
-		struct eth_device *dev = eth_devices;
-		char *ethprime = getenv ("ethprime");
+  if (!eth_devices) {
+    puts ("No ethernet found.\n");
+    show_boot_progress (-64);
+  } else {
+    struct eth_device *dev = eth_devices;
+    char *ethprime = getenv ("ethprime");
+    
+    show_boot_progress (65);
+    do {
+      if (eth_number)
+	puts (", ");
+      
+      printf("%s", dev->name);
+      
+      if (ethprime && strcmp (dev->name, ethprime) == 0) {
+	eth_current = dev;
+	puts (" [PRIME]");
+      }
+      
+      eth_getenv_enetaddr_by_index(eth_number, env_enetaddr);
+      
+      if (memcmp(env_enetaddr, "\0\0\0\0\0\0", 6)) {
+	if (memcmp(dev->enetaddr, "\0\0\0\0\0\0", 6) &&
+	    memcmp(dev->enetaddr, env_enetaddr, 6))
+	  {
+	    printf ("\nWarning: %s MAC addresses don't match:\n",
+		    dev->name);
+	    printf ("Address in SROM is         %pM\n",
+		    dev->enetaddr);
+	    printf ("Address in environment is  %pM\n",
+		    env_enetaddr);
+	  }
+	
+	memcpy(dev->enetaddr, env_enetaddr, 6);
+      }
 
-		show_boot_progress (65);
-		do {
-			if (eth_number)
-				puts (", ");
-
-			printf("%s", dev->name);
-
-			if (ethprime && strcmp (dev->name, ethprime) == 0) {
-				eth_current = dev;
-				puts (" [PRIME]");
-			}
-
-			eth_getenv_enetaddr_by_index(eth_number, env_enetaddr);
-
-			if (memcmp(env_enetaddr, "\0\0\0\0\0\0", 6)) {
-				if (memcmp(dev->enetaddr, "\0\0\0\0\0\0", 6) &&
-				    memcmp(dev->enetaddr, env_enetaddr, 6))
-				{
-					printf ("\nWarning: %s MAC addresses don't match:\n",
-						dev->name);
-					printf ("Address in SROM is         %pM\n",
-						dev->enetaddr);
-					printf ("Address in environment is  %pM\n",
-						env_enetaddr);
-				}
-
-				memcpy(dev->enetaddr, env_enetaddr, 6);
-			}
-
-			eth_number++;
-			dev = dev->next;
-		} while(dev != eth_devices);
-
+      eth_number++;
+      dev = dev->next;
+    } while(dev != eth_devices);
+    
 #ifdef CONFIG_NET_MULTI
-		/* update current ethernet name */
-		if (eth_current) {
-			char *act = getenv("ethact");
-			if (act == NULL || strcmp(act, eth_current->name) != 0)
-				setenv("ethact", eth_current->name);
-		} else
-			setenv("ethact", NULL);
+    /* update current ethernet name */
+    if (eth_current) {
+      char *act = getenv("ethact");
+      if (act == NULL || strcmp(act, eth_current->name) != 0)
+	setenv("ethact", eth_current->name);
+    } else
+      setenv("ethact", NULL);
 #endif
-
-		putc ('\n');
-	}
-
-	return eth_number;
+    
+    putc ('\n');
+  }
+  
+  return eth_number;
 }
 
 #ifdef CONFIG_MCAST_TFTP

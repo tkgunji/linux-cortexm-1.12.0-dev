@@ -11,7 +11,7 @@ struct serial_device {
 	int  (*init) (void);
 	void (*setbrg) (void);
 	int (*getc) (void);
-	int (*tstc) (void);
+        int (*tstc) (void);
 	void (*putc) (const char c);
 	void (*puts) (const char *s);
 

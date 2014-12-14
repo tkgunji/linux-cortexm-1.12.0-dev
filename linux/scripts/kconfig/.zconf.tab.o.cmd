@@ -7,13 +7,13 @@ deps_scripts/kconfig/zconf.tab.o := \
   /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h \
-  /usr/include/gnu/stubs-32.h \
+  /usr/include/gnu/stubs-64.h \
   /usr/include/bits/types.h \
-  /usr/lib/gcc/i386-redhat-linux/4.1.2/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stddef.h \
   /usr/include/bits/typesizes.h \
   /usr/include/endian.h \
   /usr/include/bits/endian.h \
-  /usr/lib/gcc/i386-redhat-linux/4.1.2/include/stdarg.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stdarg.h \
   /usr/include/stdio.h \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
@@ -36,7 +36,7 @@ deps_scripts/kconfig/zconf.tab.o := \
   /usr/include/string.h \
   /usr/include/bits/string.h \
   /usr/include/bits/string2.h \
-  /usr/lib/gcc/i386-redhat-linux/4.1.2/include/stdbool.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stdbool.h \
   scripts/kconfig/lkc.h \
     $(wildcard include/config/list.h) \
   scripts/kconfig/expr.h \
@@ -50,10 +50,11 @@ deps_scripts/kconfig/zconf.tab.o := \
   /usr/include/bits/errno.h \
   /usr/include/linux/errno.h \
   /usr/include/asm/errno.h \
+  /usr/include/asm-x86_64/errno.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/errno-base.h \
-  /usr/lib/gcc/i386-redhat-linux/4.1.2/include/limits.h \
-  /usr/lib/gcc/i386-redhat-linux/4.1.2/include/syslimits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/limits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/syslimits.h \
   /usr/include/limits.h \
   /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h \

@@ -1,0 +1,381 @@
+Archive member included because of file (symbol)
+
+libstubs.a(stubs.o)           hello_world.o (getc)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .text set to 0xc100000
+LOAD hello_world.o
+LOAD libstubs.a
+LOAD /rcu2/release/linux-cortexm-1.11.0/tools/arm-2010q1/bin/../lib/gcc/arm-uclinuxeabi/4.4.1/libgcc.a
+                0x00008000                PROVIDE (__executable_start, 0x8000)
+                0x00008054                . = (0x8000 + SIZEOF_HEADERS)
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.dyn
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rel.ifunc)
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rela.ifunc)
+
+.rel.plt        0x00008054        0x0
+ *(.rel.plt)
+                0x00008054                PROVIDE (__rel_iplt_start, .)
+ *(.rel.iplt)
+                0x00008054                PROVIDE (__rel_iplt_end, .)
+
+.rela.plt       0x00008054        0x0
+ *(.rela.plt)
+                0x00008054                PROVIDE (__rela_iplt_start, .)
+ *(.rela.iplt)
+                0x00008054                PROVIDE (__rela_iplt_end, .)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+ *(.iplt)
+
+.text           0x0c100000      0x158
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0c100000       0x30 hello_world.o
+                0x0c100000                hello_world
+ .text          0x0c100030      0x128 libstubs.a(stubs.o)
+                0x0c100030                dummy
+                0x0c100030                get_version
+                0x0c100038                getc
+                0x0c100040                tstc
+                0x0c100048                putc
+                0x0c100050                puts
+                0x0c100058                printf
+                0x0c100060                install_hdlr
+                0x0c100068                free_hdlr
+                0x0c100070                malloc
+                0x0c100078                free
+                0x0c100080                udelay
+                0x0c100088                get_timer
+                0x0c100090                vprintf
+                0x0c100098                do_reset
+                0x0c1000a0                getenv
+                0x0c1000a8                setenv
+                0x0c1000b0                forceenv
+                0x0c1000b8                simple_strtoul
+                0x0c1000c0                simple_strtol
+                0x0c1000c8                strcmp
+                0x0c1000d0                i2c_write
+                0x0c1000d8                i2c_read
+                0x0c1000e0                spi_init
+                0x0c1000e8                spi_setup_slave
+                0x0c1000f0                spi_free_slave
+                0x0c1000f8                spi_claim_bus
+                0x0c100100                spi_release_bus
+                0x0c100108                spi_xfer
+                0x0c100114                app_startup
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+ *(.v4_bx)
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.fini
+ *(.fini)
+                0x0c100158                PROVIDE (__etext, .)
+                0x0c100158                PROVIDE (_etext, .)
+                0x0c100158                PROVIDE (etext, .)
+
+.rodata         0x0c100158       0x30
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x0c100158       0x30 hello_world.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0c100188                PROVIDE (__exidx_start, .)
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x0c100188                PROVIDE (__exidx_end, .)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x0c100188                . = (ALIGN (0x8000) - ((0x8000 - .) & 0x7fff))
+                0x0c108188                . = (0x8000 DATA_SEGMENT_ALIGN 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x0c108188        0x0
+                0x0c108188                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x0c108188                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x0c108188        0x0
+                0x0c108188                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x0c108188                PROVIDE (__init_array_end, .)
+
+.fini_array     0x0c108188        0x0
+                0x0c108188                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array)
+                0x0c108188                PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic
+ *(.dynamic)
+                0x0c108188                . = (. DATA_SEGMENT_RELRO_END 0x0)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x0c108188        0x0
+                0x0c108188                __data_start = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0c108188        0x0 hello_world.o
+ .data          0x0c108188        0x0 libstubs.a(stubs.o)
+
+.data1
+ *(.data1)
+                0x0c108188                _edata = .
+                0x0c108188                PROVIDE (edata, .)
+                0x0c108188                __bss_start = .
+                0x0c108188                __bss_start__ = .
+
+.bss            0x0c108188        0x0
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0c108188        0x0 hello_world.o
+ .bss           0x0c108188        0x0 libstubs.a(stubs.o)
+ *(COMMON)
+                0x0c108188                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x0c108188                _bss_end__ = .
+                0x0c108188                __bss_end__ = .
+                0x0c108188                . = ALIGN (0x4)
+                0x0c108188                . = ALIGN (0x4)
+                0x0c108188                __end__ = .
+                0x0c108188                _end = .
+                0x0c108188                PROVIDE (end, .)
+                0x0c108188                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x31 hello_world.o
+ .ARM.attributes
+                0x00000031       0x31 libstubs.a(stubs.o)
+
+.comment        0x00000000       0x56
+ *(.comment)
+ .comment       0x00000000       0x2b hello_world.o
+ .comment       0x0000002b       0x2b libstubs.a(stubs.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x40
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 hello_world.o
+ .debug_aranges
+                0x00000020       0x20 libstubs.a(stubs.o)
+
+.debug_pubnames
+                0x00000000       0x4e
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x22 hello_world.o
+ .debug_pubnames
+                0x00000022       0x2c libstubs.a(stubs.o)
+
+.debug_info     0x00000000      0x264
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0xc3 hello_world.o
+ .debug_info    0x000000c3      0x1a1 libstubs.a(stubs.o)
+
+.debug_abbrev   0x00000000      0x11c
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x6f hello_world.o
+ .debug_abbrev  0x0000006f       0xad libstubs.a(stubs.o)
+
+.debug_line     0x00000000       0xfa
+ *(.debug_line)
+ .debug_line    0x00000000       0x49 hello_world.o
+ .debug_line    0x00000049       0xb1 libstubs.a(stubs.o)
+
+.debug_frame    0x00000000       0x58
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x28 hello_world.o
+ .debug_frame   0x00000028       0x30 libstubs.a(stubs.o)
+
+.debug_str      0x00000000      0x249
+ *(.debug_str)
+ .debug_str     0x00000000       0xba hello_world.o
+                                 0xf3 (size before relaxing)
+ .debug_str     0x000000ba      0x18f libstubs.a(stubs.o)
+                                0x263 (size before relaxing)
+
+.debug_loc      0x00000000       0x76
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x45 hello_world.o
+ .debug_loc     0x00000045       0x31 libstubs.a(stubs.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+OUTPUT(hello_world elf32-littlearm)
